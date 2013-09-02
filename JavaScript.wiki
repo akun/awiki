@@ -1,0 +1,23 @@
+= JavaScript =
+
+== 逗号 ==
+
+IE下最后结尾不能有逗号，虽然别的浏览器有兼容，但还是不要这么做
+
+错误用法
+{{{
+{
+  id: 'tid',
+  name: 'title',
+  style: 'inherit',
+  submit: '确定',
+}
+}}}
+
+== trim ==
+
+* JavaScript自带的trim在IE下有兼容问题
+* 用jQuery的$.trim方法各种兼容
+{{{
+$.trim($(this).text());
+}}}

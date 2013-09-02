@@ -1,0 +1,8 @@
+= Python =
+
+* 日志：http://docs.python.org/2/howto/logging-cookbook.html#logging-cookbook
+
+%% TODO 待整理
+%% 性能分析：https://launchpad.net/meliae
+%% root domain: utils/root_domain.py
+%% print >>output, "wello horld"

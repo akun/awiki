@@ -1,0 +1,99 @@
+= Django =
+
+== 源码中各种有用的中间件 ==
+
+== 数据库中的zlib ==
+
+http://stackoverflow.com/questions/875122/zlib-in-database-django
+
+{{{class="brush: python"
+from base64 import binascii
+
+f = VCFile(head = binascii.b2a_base64('blahblah'.encode('zlib')))
+}}}
+
+== ORM ==
+
+http://www.eflorenzano.com/blog/post/secrets-django-orm/
+
+{{{class="brush: python"
+[[>>>]] qs = TumbleItem.objects.all()
+>>> qs.query.group_by = ['item_type']
+>>> qs.query.having = ['COUNT(item_type) > 1']
+>>> item_types = [i.item_type for i in qs]
+>>> item_types
+[u'blog', u'digg']
+}}}
+
+== 大数 ==
+
+新版Django已经支持
+
+http://www.numlock.ch/news/it/django-custom-model-field-for-an-unsigned-bigint-data-type/
+
+{{{class="brush: python"
+from django.db import models
+from django.db.models.fields import PositiveIntegerField
+
+class PositiveBigIntegerField(PositiveIntegerField):
+    """Represents MySQL's unsigned BIGINT data type (works with MySQL only!)"""
+    empty_strings_allowed = False
+
+    def get_internal_type(self):
+        return "PositiveBigIntegerField"
+
+    def db_type(self):
+        # This is how MySQL defines 64 bit unsigned integer data types
+        return "bigint UNSIGNED"
+
+class Mytest(models.Model):
+    """Just a test model"""
+
+    huge_id = PositiveBigIntegerField()
+
+    def __unicode__(self):
+        return u'id: %s, huge_id: %s' % (self.id, self.huge_id)
+}}}
+
+== 序列化 ==
+
+python ui/manage.py loaddata site.json
+
+{{{class="brush: python"
+
+from django.core import serializers
+
+from django.core.management import setup_environ
+from myproject.ui import settings
+setup_environ(settings)
+from myproject.ui.models import Task
+
+task = Task.objects.get(id=9527)
+all_objects = [task]
+
+json_serializer = serializers.get_serializer('json')()
+json_serializer.serialize(all_objects, ensure_ascii=True, stream=open('site.json', 'w'))
+}}}
+
+== 乘除法 ==
+
+http://my.oschina.net/renwofei423/blog/12713
+
+{{{
+django 模板的乘法，除法
+
+Note: The results are rounded to an integer before returning, so this may have marginal utility for many cases.
+
+So, in summary:
+
+to compute A*B: {% widthratio A 1 B %}
+to compute A/B: {% widthratio AB 1 %}
+
+And, since add is a filter and not a tag, you can always to crazy stuff like:
+
+compute A^2: {% widthratio A 1 A %}
+compute (A+B)^2: {% widthratio A|add:B 1 A|add:B %}
+compute (A+B) * (C+D): {% widthratio A|add:B 1 C|add:D %}
+}}}
+
+原文出处：http://slacy.com/blog/2010/07/using-djangos-widthratio-template-tag-for-multiplication-division/
