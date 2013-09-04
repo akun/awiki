@@ -1,5 +1,57 @@
 = Django =
 
+== 熟练度 ==
+
+=== manage.py ===
+python manage.py --help
+
+Usage: manage.py subcommand [options] [args]
+
+* [ ] Options:
+* [X]   --settings=SETTINGS   The Python path to a settings module, e.g.<br>
+                         "myproject.settings.main". If this isn't provided, the<br>
+                         DJANGO_SETTINGS_MODULE environment variable will be<br>
+                         used.
+* [ ]   --pythonpath=PYTHONPATH<br>
+                         A directory to add to the Python path, e.g.<br>
+                         "/home/djangoprojects/myproject".
+* [ ]   --traceback           Print traceback on exception
+* [ ]   --version             show program's version number and exit
+* [X]   -h, --help            show this help message and exit
+
+Type 'manage.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+* [ ]   cleanup
+* [ ]   compilemessages
+* [ ]   createcachetable
+* [ ]   createsuperuser
+* [X]   dbshell
+* [ ]   diffsettings
+* [ ]   dumpdata
+* [ ]   flush
+* [ ]   inspectdb
+* [ ]   loaddata
+* [ ]   makemessages
+* [ ]   reset
+* [ ]   runfcgi
+* [X]   runserver
+* [ ]   shell
+* [ ]   sql
+* [ ]   sqlall
+* [ ]   sqlclear
+* [ ]   sqlcustom
+* [ ]   sqlflush
+* [ ]   sqlindexes
+* [ ]   sqlinitialdata
+* [ ]   sqlreset
+* [ ]   sqlsequencereset
+* [X]   startapp
+* [X]   syncdb
+* [X]   test
+* [ ]   testserver
+* [ ]   validate
+
 == 源码中各种有用的中间件 ==
 
 == 数据库中的zlib ==

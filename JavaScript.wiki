@@ -21,3 +21,7 @@ IE下最后结尾不能有逗号，虽然别的浏览器有兼容，但还是不
 {{{
 $.trim($(this).text());
 }}}
+
+== 单元测试 ==
+
+* https://github.com/pivotal/jasmine

@@ -1,0 +1,34 @@
+= SVN =
+
+== 熟练度 ==
+
+* [X] svn proplist
+
+== 推荐 ==
+
+* svn merge --dry-run -r 6416:HEAD svn_path .
+
+查看日志，确定需要开始合并的版本号
+
+本次是以分别建立2个分支的版本作为起始版本
+
+svn log | less
+
+svn log svn_path | less
+
+模拟合并：svn merge --ignore-ancestry --dry-run -r6210:HEAD path .
+
+最好根据2个分支日志记录，一步步手工合并，不要隔了很长时间才合并
+
+
+== 慎用 ==
+
+svn merge --ignore-ancestry -c 1234 svn_path
+
+svn propdel svn:mergeinfo -R
+
+svn revert .
+
+[[svn]] ci -m "Removed mergeinfo"
+
+svn resolved

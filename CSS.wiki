@@ -1,0 +1,15 @@
+= CSS =
+
+== 取消float效果 ==
+
+{{{
+<div style="clear:both;"></div>
+}}}
+
+这个DIV层是为了父DIV层高度自动化而加的
+
+== 换行 ==
+
+{{{
+#wrap{word-break:break-all; width:200px;}
+}}}

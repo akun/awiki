@@ -1,0 +1,43 @@
+= GPG =
+
+参考：
+
+* http://www.alexgao.com/2009/01/24/gpg/
+* http://wowubuntu.com/gpg.html
+* http://www.gnupg.org/howtos/zh/
+
+1.生成密钥对
+
+gpg --gen-key
+
+（真随机数，会很慢，可以ping一个域名，来提高随机数生成效率）
+
+2.密钥的回收
+
+gpg --list-keys
+
+gpg --output revoke.asc --gen-revoke akun
+
+3.传播公钥
+
+gpg --export --armor akun > gpgkey.pub.asc
+
+4.密钥的导出/导入
+
+公钥的导出：
+
+gpg -o gpgkey.pub.asc --ar mor --export akun
+
+私钥的导出：
+
+gpg -o gpgkey.secret --armor --export-secret-keys akun
+
+5.加密解密
+
+gpg -ea -r akun password
+
+6.删除密钥
+
+gpg --delete-secret-keys akun
+
+gpg --delete-keys akun

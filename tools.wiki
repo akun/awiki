@@ -1,0 +1,5 @@
+= 杂项工具 =
+
+* 截图命令行：imagemagick
+* 类似grep：http://betterthangrep.com/
+* http://www.harding.motd.ca/autossh/

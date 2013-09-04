@@ -1,0 +1,11 @@
+= MongoDB =
+
+* 释放MongoDB空间慎用：http://dikar.iteye.com/blog/1028243
+* 文档学习：http://wenku.it168.com/redian/mongoDB/
+* 必须明确指定类型：db.data.update({'name': 'zero'}, {'$set': {'value': NumberInt(0)}})
+* 调式MapReduce：http://stackoverflow.com/questions/7527126/mongodb-how-to-debug-map-reduce-on-mongodb-shell
+  * print + 看日志
+* MapReduce必须存在collection：http://stackoverflow.com/questions/10284048/mongodb-map-reduce-to-get-uniques-by-date-day
+* pymongo的save方法要慎用
+* 后台索引：db.people.ensureIndex( { zipcode: 1}, {background: true} )
+* http://stackoverflow.com/questions/10298354/cursor-id-not-valid-error

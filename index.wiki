@@ -1,8 +1,9 @@
-= akun's Wiki =
+[[=]] akun's Wiki =
 
 %toc
 
-这里只用来记录零散的知识点，系统的知识直接看官方文档、读书笔记、[[https://github.com/akun/pm|写的小册子]]或[[http://zhengkun.info/|Blog文章]]
+这里只用来记录零散的知识点，系统的知识直接看官方文档、读书笔记、
+[[https://github.com/akun/pm|写的小册子]]或[[http://zhengkun.info/|Blog文章]]
 
 == 编程语言 ==
 
@@ -14,32 +15,48 @@
 
 == 数据库 ==
 
-MySQL | MongoDB
+MySQL | [[MongoDB]]
 
 == 操作系统 ==
 
-* Linux
+* [[Linux]]
 
 == 网络 ==
 
-* HTTP
+[[TCP_IP|TCP/IP]] | [[HTTP]]
 
 == 版本控制 ==
 
-SVN | Git
+[[SVN]] | Git
 
 == 前端编程 ==
 
-* CSS
-* JSUnit
-* 效果库
+* [[CSS]]
+* [[FrontEnd/lib|效果库]]
 
 == 加密 ==
 
-* gpg
+* [[GPG]]
 
 == 可视化 ==
 
+* http://www.gnuplot.info/
+* http://www.graphviz.org/
+
+== 编辑器 ==
+
+* [[Vim]]
+
 == 工具 ==
 
-* 命令行
+* [[tools|杂项工具]]
+
+== 经验 ==
+
+* 子域名处理：http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1
+
+== 链接 ==
+
+* http://docs.fabfile.org/
+* http://linuxtoy.org/archives/autojump.html
+* http://programming-motherfucker.com/
