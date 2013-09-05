@@ -1,4 +1,4 @@
-[[=]] akun's Wiki =
+= akun's Wiki =
 
 %toc
 
