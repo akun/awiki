@@ -46,15 +46,15 @@ Swap:          964          0        964
 
 真正的空闲内存：3554
 
-== sudo ==
+=== sudo ===
 
 sudo重定向：sudo sh -c "route -n > /tmp/haha"
 
-== ip ==
+=== ip ===
 
 ip addr add xxx.xxx.xxx.xxx/27 dev eth0
 
-== ngrep ==
+=== ngrep ===
 
 ngrep -d eth1 port 80 -W byline &> /tmp/x.txt
 
@@ -63,3 +63,111 @@ ngrep -d eth1 port 80 -W byline &> /tmp/x.txt
 * date -d today +"%Y-%m-%d"
 * 反选删除：ls | grep -v 'NOT_DEL' | xargs rm -rf
 * 进程标准输出：tail -f /proc/14383/fd/2
+
+=== ssh + mysql/mysqldump ===
+
+ssh 端口转发
+
+* ssh -L 3307:localhost:22 xxx.xxx.xxx.xxx -N
+* ssh -L 3307:localhost:3306 xxx.xxx.xxx.xxx -N
+* mysql --host localhost --port 3307 -uroot -p
+
+mysqldump 远程
+
+* http://www.cnblogs.com/pricks/archive/2009/05/27/1490713.html
+* https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/
+
+== DHCP ==
+
+DHCP配置
+
+http://blog.csdn.net/xl_xunzhao/article/details/3044502
+
+Linux下DHCP服务器配置（使用Ubuntu LTS 8.04）
+
+系统环境：Ubuntu 8.04 LTS服务器版
+linux下DHCP服务器的配置其实就是配置dhcpd.conf文件。
+
+（1）首先安装DHCP服务器程序dhcp3-server，可以使用命令
+
+sudo apt-get install dhcp3-server
+
+进行安装，当然有图形界面的话使用新立得进行安装也是一样的。
+
+（2）安装完成后开始配置DHCP服务器。
+
+先备份系统原有的配置文件
+
+sudo cp /etc/dhcp3/dhcpd.conf /etc/dhcp3/dhcpd.conf.original
+
+开始配置sudo vim /etc/dhcp3/dhcpd.conf，在dhcpd.conf中添加或修改以下几句：
+
+ddns-update-style none;  #定义所支持的DNS动态更新类型（必选），默认为none
+
+default-lease-time 36000;  #租约期限，单位为秒保持默认的也可以
+
+max-lease-time 72000;  #最大租约期限
+
+#设置IP作用域，格式为subnet子网ID netmask 子网掩码{}
+{{{
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.1.100 192.168.1.200;  # 可供分配给客户端的IP范围
+  option routers 192.168.1.1;  # 指定默认网关
+  option subnet-mask 255.255.255.0;  # 设置子网掩码
+  option broadcast-address 192.168.1.255;  # 指定广播地址
+  option domain-name "abc.com";  # 设置DNS域名，则主机名为movie的全名为movie.abc.com
+  option domain-name-servers 202.101.107.85,218.85.157.99,210.34.240.100;  # 指定DNS服务器
+  option netbios-name-servers 192.168.1.2;
+}
+}}}
+
+（3）保存配置文件并重启DHCP服务器，这样就可以满足一般的典型网络的基本要求了，DHCP也就能用了。下面是针对有特殊要求的，或者网络中有划分VLAN等需要DHCP中继代理的。
+
+3.1保留特定的IP地址（或指定某IP永远分配给某主机，即IP MAC绑定，或称为分配静态IP或分配固定IP），使用host语句。
+
+例如保留192.168.1.101给MAC地址为00:17:41:c9:21:64的主机使用，其主机名为movie，则host语句如下
+
+{{{
+host movie {
+  hardware ethernet 00:17:41:c9:21:64;
+  fixed-address 192.168.1.101;
+  option routers 192.168.1.1;  # 指定默认网关,也可省略，使用subnet所指定的配置
+｝
+}}}
+
+3.2设置DHCP中继代理
+
+设置DHCP中继代理一般使用于物理网络中存在多个IP子网，或者网络划分了VLAN，由于DHCP采用广播方式获取IP，物理子网和VLAN隔离了广播域，因此如果PC与DHCP服务器处于不同的子网，就无法获取IP，DHCP中继代理允许将无DHCP服务器的子网内的DHCP客户端的请求转发给其他子网内的DHCP服务器，这样就解决了不同子网间DHCP获取的问题了。
+
+3.2.1 首先在DHCP服务器上设置超级作用域
+
+shared-network名称
+
+{{{
+{
+
+  option subnet-mask 255.255.255.0;  # 设置子网掩码
+  option domain-name "abc.com";  # 设置DNS域名，则主机名为movie的全名为movie.abc.com
+  option domain-name-servers 202.101.107.85,218.85.157.99,210.34.240.100;  # 指定DNS服务器
+  option netbios-name-servers 192.168.1.2;  # 一些公共的配置就可以写在subnet外部，供所有subnet共享
+  subnet子网1的网络ID  netmask 子网掩码 {
+    ..........
+    ..........
+  }
+
+  subnet子网2的网络ID  netmask 子网掩码｛
+    ..........
+    ..........
+  }
+}
+}}}
+
+3.2.2 设置DHCP中继代理
+
+在连接多个子网的那台主机上安装中继代理，或者选用具有DHCP/BOOTP中继功能的路由器，这样就完成了所有配置。
+
+启动DHCP服务sudo /etc/init.d/dhcp3-server start
+
+停止DHCP服务sudo /etc/init.d/dhcp3-server stop
+
+重启DHCP服务sudo /etc/init.d/dhcp3-server restart
