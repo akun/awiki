@@ -1,0 +1,3 @@
+= Git =
+
+svn revert - git checkout

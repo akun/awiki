@@ -1,0 +1,14 @@
+= Tornado =
+
+{{{
+settings = {'debug' : True}
+
+application = tornado.web.Application([
+    (r"/", MainHandler),
+], **settings)
+
+def main():
+    server = tornado.httpserver.HTTPServer(application)
+    server.listen(8888)
+    tornado.ioloop.IOLoop.instance().start()
+}}}
