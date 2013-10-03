@@ -1,3 +1,8 @@
 = Git =
 
-svn revert - git checkout
+== diff or same ==
+svn revert   - git checkout
+svn update   - git pull
+svn commit   - git push
+svn log      - git log
+svn checkout - git clone

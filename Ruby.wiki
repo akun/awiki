@@ -1,6 +1,6 @@
 = Ruby =
 
-no such file to load -- net/https
+
 
 {{{
 sudo apt-get install libopenssl-ruby
@@ -15,3 +15,4 @@ http://ruby.taobao.org
 # $ gem install rails
 }}}
 
+gem install compass

@@ -9,3 +9,7 @@
 * pymongo的save方法要慎用
 * 后台索引：db.people.ensureIndex( { zipcode: 1}, {background: true} )
 * http://stackoverflow.com/questions/10298354/cursor-id-not-valid-error
+
+setup in Ubuntu
+
+http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/

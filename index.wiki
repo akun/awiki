@@ -11,7 +11,7 @@
 
 == 编程框架 ==
 
-[[Django]] | [[Tornado]] | [[jQuery]] | [[AngularJS]]
+[[Django]] | [[Tornado]] | [[NodeJS]] | [[jQuery]] | [[AngularJS]]
 
 == 数据库 ==
 
@@ -34,6 +34,7 @@ MySQL | [[MongoDB]]
 * [[CSS]]
 * [[FrontEnd/lib|效果库]]
 * [[yeoman]]
+* [[Grunt]]
 
 == 加密 ==
 
@@ -50,6 +51,7 @@ MySQL | [[MongoDB]]
 
 == 工具 ==
 
+* [[VimWiki]]
 * [[tools|杂项工具]]
 
 == 软件工程 ==

@@ -1,0 +1,17 @@
+= NodeJS =
+
+setup in Ubuntu
+
+{{{
+sudo apt-get install python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+}}}
+
+while error
+
+{{{
+vim /etc/apt/sources.list
+deb http://archive.ubuntu.com/ubuntu precise universe
+}}}
