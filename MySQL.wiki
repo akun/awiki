@@ -1,0 +1,44 @@
+= MySQL =
+
+
+== 查询结果到文件 ==
+
+{{{
+SELECT * INTO OUTFILE 'file_name' FROM table_name;
+
+SELECT * FROM table_name INTO OUTFILE 'file_name';
+}}}
+
+== 遍dump遍压缩 ==
+
+{{{
+mysqldump -uusername -p database | gzip > database.sql.gz
+}}}
+
+
+== 增加用户 ==
+
+
+== 修改表结构 ==
+
+* 主键限制
+* 字段相关
+  * 增加字段
+  * 删除字段
+  * 修改字段类型
+  * 改名
+* 索引
+
+== Handler_read_* ==
+
+{{{
+SHOW SESSION STATUS LIKE 'Handler_read%';
+}}}
+
+== 慢日志 ==
+
+== 列互相更新 ==
+
+{{{
+UPDATE table_name SET a=b, b=a;
+}}}

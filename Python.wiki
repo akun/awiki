@@ -1,8 +1,56 @@
 = Python =
 
+%toc
+
 * 日志：http://docs.python.org/2/howto/logging-cookbook.html#logging-cookbook
 
 %% TODO 待整理
 %% 性能分析：https://launchpad.net/meliae
 %% root domain: utils/root_domain.py
 %% print >>output, "wello horld"
+
+== 有意思的 ==
+
+=== 注释技巧 ===
+
+{{{
+# TODO: 连调OK
+'''
+return {
+    'can_add': can_add, 'has_error': has_error,
+    'return': api_system_status_return,
+}
+'''
+return {
+    'can_add': True, 'has_error': False,
+    'return': api_system_status_return,
+}
+#'''
+}}}
+
+== 代码片段 ==
+
+{{{
+url.startswith(('http://', 'https://'))
+}}}
+
+== datetime & time ==
+
+datetime与time之间的相互转换如下几步：
+
+{{{
+>>> import time, datetime
+>>> t = time.time()
+>>> d_from_t = datetime.datetime.fromtimestamp(t)
+>>> d_from_t
+datetime.datetime(2008, 10, 31, 12, 50, 29, 578000)
+>>> tt = time.mktime(d_from_t.timetuple())
+>>> tt
+1225428629.0
+>>> t
+1225428629.5780001
+}}}
+
+不过在转换的过程中需要注意的是：
+* time到datetime的转换是忽略小数点后面的数值
+* 即：int(t) = int(tt), t != tt

@@ -1,0 +1,30 @@
+= 未归类 =
+
+== Leo ==
+
+* http://wiki.woodpecker.org.cn/moin/LeoEnvironment
+
+== Trac ==
+
+* http://virtual-planner.palepurple.co.uk/wiki/django-installation
+* http://virtual-planner.palepurple.co.uk/wiki/NotifyPlugin
+* http://trac-hacks.org/wiki/SubticketsPlugin
+* http://www.elias.cn/Develop/TracMini
+
+== SQLAlchemy ==
+
+*  http://www.sqlalchemy.org/docs/search.html?q=create_all&check_keywords=yes&area=default
+
+== South ==
+
+* http://tzangms.com/programming/2484/
+* http://hi.bccn.net/space-2-do-blog-id-17532.html
+* http://south.aeracode.org/
+* http://south.aeracode.org/docs/tutorial/part1.html#converting-existing-apps
+* http://south.aeracode.org/docs/tutorial/part1.html#starting-off
+
+
+== NoSQL graph database ==
+
+* http://neo4j.org/
+* http://www.readwriteweb.com/cloud/2011/04/5-graph-databases-to-consider.php

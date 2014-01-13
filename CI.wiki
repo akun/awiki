@@ -1,0 +1,5 @@
+= 持续集成 =
+
+* http://peak.telecommunity.com/DevCenter/setuptools#test-build-package-and-run-a-unittest-suite
+* http://bitten.edgewall.org/wiki/Documentation/commands.html#python-exec
+* http://cloudsizzle.cs.hut.fi/trac/build/trunk/400#step_build

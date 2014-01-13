@@ -1,0 +1,5 @@
+= PuTTY =
+
+* Window -> Control the scrollback in the window -> Lines of scrollback -> 20000
+* Window -> Translation -> Character set translation on received data -> UTF-8
+* Connection -> Sending of null packets to keep session active -> 60

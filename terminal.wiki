@@ -1,0 +1,28 @@
+= 终端工具 =
+
+== screen ==
+
+常用：
+* 恢复：screen -drU kun
+* 创建：Ctrl + a c
+* 重命名：Ctrl + a A
+* 显示清单：Ctrl + a  "
+* 选择：Ctrl + a 1-n
+
+开发状态常用布局：
+* bash
+* vim
+* run
+* db
+* test
+* log
+* doc
+* 等等
+
+== Byobu ==
+
+* sudo apt-get install byobu byobu-extras
+* byobu -S session_name
+* byobu -r session_name
+
+== tmux ==

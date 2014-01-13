@@ -3,19 +3,30 @@
 %toc
 
 这里只用来记录零散的知识点，系统的知识直接看官方文档、读书笔记、
-[[https://github.com/akun/pm|写的小册子]]或[[http://zhengkun.info/|Blog文章]]
+[[http://pm.readthedocs.org/|写的小册子]]或[[http://zhengkun.info/|Blog文章]]
 
 == 编程语言 ==
 
-[[Python]] | [[Ruby]] | [[JavaScript]] | [[Shell]]
+* [[Python]]
+* [[JavaScript]]
+* [[Shell]]
+* C
+* Erlang
+* Java
+* [[Ruby]]
 
 == 编程框架 ==
 
-[[Django]] | [[Tornado]] | [[NodeJS]] | [[jQuery]] | [[AngularJS]]
+* [[Django]]
+* [[Tornado]]
+* [[NodeJS]]
+* [[jQuery]]
+* [[AngularJS]]
 
 == 数据库 ==
 
-MySQL | [[MongoDB]]
+* [[MySQL]]
+* [[MongoDB]]
 
 == 操作系统 ==
 
@@ -23,16 +34,20 @@ MySQL | [[MongoDB]]
 
 == 网络 ==
 
-[[TCP_IP|TCP/IP]] | [[HTTP]]
+* [[TCP_IP|TCP/IP]]
+* [[HTTP]]
 
 == 版本控制 ==
 
-[[SVN]] | [[Git]]
+* [[SVN]]
+* [[Git]]
 
 == 前端编程 ==
 
+* [[HTML]]
 * [[CSS]]
 * [[FrontEnd/lib|效果库]]
+* Bootstrap
 * [[yeoman]]
 * [[Grunt]]
 
@@ -40,10 +55,16 @@ MySQL | [[MongoDB]]
 
 * [[GPG]]
 
+== 安全 ==
+
+* [[security|安全]]
+
 == 可视化 ==
 
 * http://www.gnuplot.info/
 * http://www.graphviz.org/
+* http://processingjs.org/
+* http://mrdoob.github.io/three.js/
 
 == 编辑器 ==
 
@@ -52,15 +73,28 @@ MySQL | [[MongoDB]]
 == 工具 ==
 
 * [[VimWiki]]
+* [[PyLint]]
+* [[PuTTY]]
+* [[terminal|终端工具]]
 * [[tools|杂项工具]]
 
 == 软件工程 ==
 
 * [[SE|软件工程]]
+* [[CI|持续集成]]
+
+== 设计 ==
+
+* [[think|设计杂感]]
 
 == 经验 ==
 
 * 子域名处理：http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1
+* [[document|文档]]
+
+== 可能会深入的 ==
+
+* [[unknown|未归类]]
 
 == 链接 ==
 

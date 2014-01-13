@@ -77,6 +77,19 @@ mysqldump 远程
 * http://www.cnblogs.com/pricks/archive/2009/05/27/1490713.html
 * https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/
 
+
+=== SSH隧道 ===
+
+{{{
+ssh -R 443:xxx.xxx.xxx.xxx:443 username@xxx.xxx.xxx.xxx
+netstat -nap|grep 443
+}}}
+
+=== 其它命令 ===
+
+* iconv
+* file
+
 == DHCP ==
 
 DHCP配置

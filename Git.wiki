@@ -1,8 +1,17 @@
 = Git =
 
 == diff or same ==
+
 svn revert   - git checkout
 svn update   - git pull
 svn commit   - git push
 svn log      - git log
 svn checkout - git clone
+
+== 技巧 ==
+
+颜色
+
+{{{
+git config --global color.diff auto
+}}}

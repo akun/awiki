@@ -3,3 +3,9 @@
 * 截图命令行：imagemagick
 * 类似grep：http://betterthangrep.com/
 * http://www.harding.motd.ca/autossh/
+
+== 调试 ==
+
+{{{
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+}}}

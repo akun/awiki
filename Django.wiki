@@ -1,5 +1,7 @@
 = Django =
 
+%toc
+
 == 熟练度 ==
 
 === manage.py ===
@@ -149,3 +151,76 @@ compute (A+B) * (C+D): {% widthratio A|add:B 1 C|add:D %}
 }}}
 
 原文出处：http://slacy.com/blog/2010/07/using-djangos-widthratio-template-tag-for-multiplication-division/
+
+== 单元测试 ==
+
+* ui目录下操作
+* 编写tests.py
+  * 基本的如200访问正常和功能正常，随着项目进行不断完善各种情况下的单元测试
+* fixture的准备
+  * 每个app独立的fixture
+  * 如：user
+  * python manage.py dumpdata user auth --indent=4 > user.json
+  * mv user.json ui/fixture/
+* 修改settings.py
+{{{
+FIXTURE_DIRS = (
+     '$PROJECT_HOME/ui/fixture/',
+ )
+}}}
+* 运行unit test
+{{{
+python manage.py test user
+}}}
+
+== 诡异问题 ==
+
+django-admin.py startproject Unknown command: 'startproject'
+
+* 在安装好Django后，一般要创建一个项目，然后设置DJANGO_SETTINGS_MODULE环境变量将其指向该项目的settings.py这个文件；
+* 如果DJANGO_SETTINGS_MODULE环境变量不为空，下次在使用django-admin.py startproject来创建新项目的时候，会提示找不到startproject这个命令，提示错误为：
+* Unknown command: 'startproject'
+* 即使使用django-admin.py --help 来查看支持的命令，里面也找不到startproject命令。
+* 原来，如果DJANGO_SETTINGS_MODULE环境变量值不为空，则startproject命令是不支持的，下次在重新创建一个项目时需要将DJANGO_SETTINGS_MODULE设置为空，startproject就又可以使用了。
+
+== Django下载大文件和压缩zip文件 ==
+
+{{{
+import os, tempfile, zipfile
+from django.http import HttpResponse
+from django.core.servers.basehttp import FileWrapper
+
+
+def send_file(request):
+    """
+    Send a file through Django without loading the whole file into
+    memory at once. The FileWrapper will turn the file object into an
+    iterator for chunks of 8KB.
+    """
+    filename = __file__ # Select your file here.
+    wrapper = FileWrapper(file(filename))
+    response = HttpResponse(wrapper, content_type='text/plain')
+    response['Content-Length'] = os.path.getsize(filename)
+    return response
+
+
+def send_zipfile(request):
+    """
+    Create a ZIP file on disk and transmit it in chunks of 8KB,
+    without loading the whole file into memory. A similar approach can
+    be used for large dynamic PDF files.
+    """
+    temp = tempfile.TemporaryFile()
+    archive = zipfile.ZipFile(temp, 'w', zipfile.ZIP_DEFLATED)
+    for index in range(10):
+        filename = __file__ # Select your files here.
+        archive.write(filename, 'file%d.txt' % index)
+    archive.close()
+    wrapper = FileWrapper(temp)
+    response = HttpResponse(wrapper, content_type='application/zip')
+    response['Content-Disposition'] = 'attachment; filename=test.zip'
+    response['Content-Length'] = temp.tell()
+    temp.seek(0)
+
+    return response
+}}}

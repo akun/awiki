@@ -1,0 +1,8 @@
+= PyLint =
+
+* 安装
+* pylint --persistent=n --generate-rcfile > .pylintrc
+* 看需要修改.pylintrc配置，例如：
+  * indent-string='\t'
+  * --max-line-length=200
+  * --generated-members=objects

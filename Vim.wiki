@@ -1,3 +1,11 @@
 = Vim =
 
 VIM插件+Python格式检查：http://www.vim.org/scripts/script.php?script_id=2441
+
+== 学习方式 ==
+
+== 日常操作 ==
+
+* 切换操作区：Ctrl + w
+
+== 高级操作 ==
