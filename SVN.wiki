@@ -1,5 +1,7 @@
 = SVN =
 
+%toc
+
 == 熟练度 ==
 
 * [X] svn proplist
@@ -20,9 +22,20 @@ svn log svn_path | less
 
 最好根据2个分支日志记录，一步步手工合并，不要隔了很长时间才合并
 
+== 技巧 ==
+
+svndiff
+
+{{{
+alias svndiff="svn diff | colordiff | less -FRSX"
+}}}
+
+* http://softwarelivre.org/terceiro/blog/a-better-svn-diff
+* http://zalas.eu/viewing-svn-diff-result-in-colors/
 
 == 慎用 ==
 
+{{{
 svn merge --ignore-ancestry -c 1234 svn_path
 
 svn propdel svn:mergeinfo -R
@@ -32,3 +45,11 @@ svn revert .
 [[svn]] ci -m "Removed mergeinfo"
 
 svn resolved
+}}}
+
+
+global ignores
+
+{{{
+svn pg svn:ignore -R .
+}}}

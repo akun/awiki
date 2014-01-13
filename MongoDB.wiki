@@ -13,3 +13,31 @@
 setup in Ubuntu
 
 http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+
+== 经验 ==
+
+* 判断是否有记录用find_one，别用count，效率更好
+* profile：http://docs.mongodb.org/manual/tutorial/manage-the-database-profiler/
+* 最大连接数：http://www.qttc.net/201304300.html
+* 从数据库长时间没同步数据：http://stackoverflow.com/questions/11537977/rs102-mongodb-on-replicaset
+* MapReduce优化：http://www.iteye.com/news/28013
+
+== 有用命令 ==
+
+* 集群状态：mongostat --discover
+
+== PyMongo ==
+
+* find_and_modify
+  * Returns either the object before or after modification based on new parameter. If no objects match the query and upsert is false, returns None. If upserting and new is false, returns {}.
+
+会自动生成ID
+
+{{{
+ObjectId()
+ObjectId(None)
+}}}
+
+== mms ==
+
+实际是封装db.serverStatus()的结果信息

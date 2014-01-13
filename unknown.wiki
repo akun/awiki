@@ -15,16 +15,11 @@
 
 *  http://www.sqlalchemy.org/docs/search.html?q=create_all&check_keywords=yes&area=default
 
-== South ==
-
-* http://tzangms.com/programming/2484/
-* http://hi.bccn.net/space-2-do-blog-id-17532.html
-* http://south.aeracode.org/
-* http://south.aeracode.org/docs/tutorial/part1.html#converting-existing-apps
-* http://south.aeracode.org/docs/tutorial/part1.html#starting-off
-
-
 == NoSQL graph database ==
 
 * http://neo4j.org/
 * http://www.readwriteweb.com/cloud/2011/04/5-graph-databases-to-consider.php
+
+== 编译 ==
+
+* http://www.yinwang.org/blog-cn/2013/03/08/on-syntax/

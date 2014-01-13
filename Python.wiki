@@ -9,6 +9,28 @@
 %% root domain: utils/root_domain.py
 %% print >>output, "wello horld"
 
+== 规范 ==
+
+{{{
+#!/usr/bin/env python
+}}}
+
+== 时间 ==
+
+{{{
+import psutil
+datetime.datetime.fromtimestamp(psutil.get_boot_time())
+time.localtime(psutil.get_boot_time())
+}}}
+
+== 异常Hook ==
+
+* http://docs.python.org/2/library/sys.html#sys.excepthook
+
+== 跨平台 ==
+
+* 文件换行，文件路径分割等用os模块提供的常量
+
 == 有意思的 ==
 
 === 注释技巧 ===
@@ -54,3 +76,15 @@ datetime.datetime(2008, 10, 31, 12, 50, 29, 578000)
 不过在转换的过程中需要注意的是：
 * time到datetime的转换是忽略小数点后面的数值
 * 即：int(t) = int(tt), t != tt
+
+== URL ==
+
+{{{
+>>> u = urlparse.urlparse('http://www.example.com/?username=admin&password=admin')
+>>> dict(urlparse.parse_qsl(u.query))
+{'username': 'admin', 'password': 'admin'}
+}}}
+
+== 疑问 ==
+
+* http://docs.python.org/2/library/inspect.html

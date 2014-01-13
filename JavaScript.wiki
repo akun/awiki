@@ -25,3 +25,17 @@ $.trim($(this).text());
 == 单元测试 ==
 
 * https://github.com/pivotal/jasmine
+
+== escape/unescape ==
+
+不推荐，用下列替代：
+
+* encodeURI()
+* encodeURIComponent()
+* decodeURI()
+* decodeURIComponent()
+
+== 链接 ==
+
+* http://benalman.com/news/2010/11/immediately-invoked-function-expression/
+* http://clausreinke.github.io/js-tools/resources.html

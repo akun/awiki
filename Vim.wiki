@@ -1,11 +1,17 @@
 = Vim =
 
-VIM插件+Python格式检查：http://www.vim.org/scripts/script.php?script_id=2441
-
-== 学习方式 ==
+* VIM插件+Python格式检查：http://www.vim.org/scripts/script.php?script_id=2441
+* https://github.com/wklken/k-vim
 
 == 日常操作 ==
 
 * 切换操作区：Ctrl + w
+* 替换选中行的匹配内容：'<,'>s/"/'/g
+* V模式（可视模式），进行区块替换
+* 退格键
+  * :set backspace=2
+
 
 == 高级操作 ==
+
+* http://vim.wikia.com/wiki/Run_a_command_in_multiple_buffers

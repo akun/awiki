@@ -6,3 +6,8 @@
   * indent-string='\t'
   * --max-line-length=200
   * --generated-members=objects
+
+== 常用 ==
+
+* pylint -E example.py
+* http://docs.pylint.org/run.html?highlight=ignore

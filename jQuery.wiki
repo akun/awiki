@@ -1,3 +1,4 @@
 = jQuery =
 
 * 浮动用animate
+* http://api.jquery.com/jQuery.isFunction/

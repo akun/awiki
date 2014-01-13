@@ -3,3 +3,5 @@
 {{{
 export PATH=$PATH:/var/lib/gems/1.8/bin/
 }}}
+
+模仿的类似开发流：ichuan.net/static/test/gfw/

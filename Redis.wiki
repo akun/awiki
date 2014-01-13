@@ -1,0 +1,5 @@
+= Redis =
+
+{{{
+redis-cli CONFIG GET \*
+}}}

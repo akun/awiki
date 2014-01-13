@@ -26,3 +26,7 @@
 * byobu -r session_name
 
 == tmux ==
+
+{{{
+tmux kill-window -t 9
+}}}

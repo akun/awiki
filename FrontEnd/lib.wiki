@@ -15,3 +15,21 @@
 == 图标搜索 ==
 
 * http://www.easyicon.net/iconsearch/security/
+* http://fontawesome.io/icons/
+
+== 图表 ==
+
+* amCharts
+  * http://www.amcharts.com/javascript-charts/angular-gauge/
+  * http://www.amcharts.com/javascript-charts/sparkline-micro-charts/
+  * http://www.amcharts.com/javascript-charts/polar/
+  * http://www.amcharts.com/javascript-charts/radar/
+  * http://www.amcharts.com/javascript-charts/javascript-chartsclock/
+  * http://www.amcharts.com/javascript-charts/clock-with-two-faces/
+  * http://www.amcharts.com/javascript-charts/pyramid-chart/
+  * http://www.amcharts.com/javascript-charts/funnel-chart/
+  * 添加横坐标竖坐标标签：chart.addLabel(60, 5, 'xxxx', 'left', 11, '#000000', 360, '40%', true);
+  * 只显示整数：valueAxis.integersOnly = true
+
+* 中国地图
+  * http://ecomfe.github.io/echarts/doc/example/map3.html

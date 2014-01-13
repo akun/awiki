@@ -63,6 +63,7 @@ ngrep -d eth1 port 80 -W byline &> /tmp/x.txt
 * date -d today +"%Y-%m-%d"
 * 反选删除：ls | grep -v 'NOT_DEL' | xargs rm -rf
 * 进程标准输出：tail -f /proc/14383/fd/2
+* 小写转化为大写：echo "Hello" | tr "[:lower:]" "[:upper:]"
 
 === ssh + mysql/mysqldump ===
 
@@ -89,6 +90,11 @@ netstat -nap|grep 443
 
 * iconv
 * file
+* comm
+* 查看IPv6：nslookup
+  * set type=AAAA
+* rsync -hvarAEHX --delete --stats --progress --numeric-ids
+* 压缩对比：http://tukaani.org/lzma/benchmarks.html
 
 == DHCP ==
 
@@ -184,3 +190,38 @@ shared-network名称
 停止DHCP服务sudo /etc/init.d/dhcp3-server stop
 
 重启DHCP服务sudo /etc/init.d/dhcp3-server restart
+
+== Make ==
+
+* http://www.yayu.org/book/gnu_make/
+
+== Gentoo ==
+
+* （译文）Gentoo的前世今生
+  * http://forum.linuxfans.org/archiver/?tid-161144.html
+  * http://forum.linuxfans.org/archiver/?tid-162060.html
+  * http://forum.linuxfans.org/archiver/?tid-163567.html
+
+== Ubuntu ==
+
+=== ppa ===
+
+{{{
+apt-get install python-software-properties
+}}}
+
+vim
+
+{{{
+apt-add-repository ppa:blueyed/ppa
+apt-get update
+apt-get install vim
+}}}
+
+svn
+
+{{{
+apt-add-repository ppa:svn/ppa
+apt-get update
+apt-get install subversion
+}}}

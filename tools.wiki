@@ -3,6 +3,39 @@
 * 截图命令行：imagemagick
 * 类似grep：http://betterthangrep.com/
 * http://www.harding.motd.ca/autossh/
+* PIL fork：https://github.com/python-imaging/Pillow
+* curl ifconfig.me
+* Python2.7前：https://pypi.python.org/pypi/argparse
+* psutil
+* http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
+* http://dag.wiee.rs/home-made/dstat/
+* http://www.vagrantup.com/
+* https://pypi.python.org/pypi/cchardet/0.3.5
+
+== CodeMirror ==
+
+* http://codemirror.net/index.html
+* https://code.google.com/p/google-diff-match-patch/wiki/API
+
+{{{
+xxxx.setSize(900, 80)
+}}}
+
+== requests ==
+
+* https://github.com/kennethreitz/requests/blob/master/requests/models.py#L399
+  * post 提交时，只有提交的数据类型是 dict ，才加 content_type = 'application/x-www-form-urlencoded'，要post一个 str，需要自己设置 headers，不然就没有 Content-Type
+  * urllib2 post 的默认 Content-Type 就是 application/x-www-form-urlencoded。
+
+== buildout ==
+
+* https://github.com/buildout/buildout/blob/master/bootstrap/bootstrap.py
+* http://jacobian.org/writing/django-apps-with-buildout/
+* https://pypi.python.org/pypi/zc.buildout/2.1.0
+
+== pip ==
+
+* pip install 直接跟文件
 
 == 调试 ==
 

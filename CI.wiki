@@ -3,3 +3,23 @@
 * http://peak.telecommunity.com/DevCenter/setuptools#test-build-package-and-run-a-unittest-suite
 * http://bitten.edgewall.org/wiki/Documentation/commands.html#python-exec
 * http://cloudsizzle.cs.hut.fi/trac/build/trunk/400#step_build
+* http://stackoverflow.com/questions/1407837/is-there-an-rake-equivalent-in-python
+
+
+== Bitten ==
+
+中文支持不好：
+
+{{{
+/usr/local/lib/python2.6/dist-packages/BittenSlave-0.6-py2.6.egg/bitten/util/xmlio.py
+    32         return text.decode('ascii', 'ignore').encode('utf-8')
+/usr/local/lib/python2.6/dist-packages/BittenSlave-0.6-py2.6.egg/bitten/slave.py
+    484                 resp = self.request('POST', build_url + '/steps/', str(xml).decode('ascii', 'ignore').encode('utf-8'),
+/usr/local/lib/python2.6/dist-packages/BittenSlave-0.6-py2.6.egg/bitten/build/pythontools.py
+    234                         missing_files.remove(filename)
+    try except
+}}}
+
+== Jenkins ==
+
+* https://wiki.jenkins-ci.org/display/JENKINS/LDAP+Plugin

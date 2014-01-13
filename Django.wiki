@@ -224,3 +224,46 @@ def send_zipfile(request):
 
     return response
 }}}
+
+== 配置 ==
+
+{{{
+DATE_INPUT_FORMATS = ('%Y%m%d',)
+}}}
+
+== 模版 ==
+
+{{{
+forloop.parentloop.counter
+}}}
+
+* 替换旧的URL模版写法：find . -name '*.html' -print0|xargs -0 sed -i -r -e "s#\{% url ([a-zA-Z0-9_.:-]+)#\{% url '\1'#g"
+  * http://stackoverflow.com/questions/13590699/migrate-url-tags-to-django-1-5
+
+Django的admin自定义模板：https://docs.djangoproject.com/en/dev/ref/django-admin/#custom-app-and-project-templates
+
+== 静态资源 ==
+
+* python manage.py collectstatic -n --noinput
+* http://blog.yangyubo.com/2012/07/26/django-staticfiles/
+
+== 不推荐 ==
+
+* simplejson is depresss
+* https://docs.djangoproject.com/en/dev/internals/deprecation/
+
+== app ==
+
+* https://pypi.python.org/pypi/django-widget-tweaks
+* https://bitbucket.org/salvator/django-admintools-bootstrap
+* http://django-admin-tools.readthedocs.org/en/latest/quickstart.html
+* https://github.com/sunlightlabs/django-mediasync/
+
+=== South ===
+
+* http://tzangms.com/programming/2484/
+* http://hi.bccn.net/space-2-do-blog-id-17532.html
+* http://south.aeracode.org/
+* http://south.aeracode.org/docs/tutorial/part1.html#converting-existing-apps
+* http://south.aeracode.org/docs/tutorial/part1.html#starting-off
+* http://south.readthedocs.org/en/latest/tutorial/part1.html

@@ -7,3 +7,5 @@ Make sure you have these settings in your vimrc file:
 * syntax on
 
 Without them Vimwiki will not work properly.
+
+* http://www.berlinix.com/vim/vimwiki_with_bootstrap_jquery.php
