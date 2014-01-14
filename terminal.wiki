@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - 终端工具
+
 = 终端工具 =
 
 == screen ==
@@ -30,3 +33,11 @@
 {{{
 tmux kill-window -t 9
 }}}
+
+http://blog.csdn.net/gilzhy/article/details/8799446
+
+== PuTTY ==
+
+* Window -> Control the scrollback in the window -> Lines of scrollback -> 20000
+* Window -> Translation -> Character set translation on received data -> UTF-8
+* Connection -> Sending of null packets to keep session active -> 60

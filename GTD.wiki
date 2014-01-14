@@ -1,0 +1,7 @@
+%toc
+%title akun's Wiki - GTD
+
+= GTD =
+
+* 每个人可以定期总结下自己GTD
+* http://wiki.hotoo.me/GTD.html

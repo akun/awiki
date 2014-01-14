@@ -1,4 +1,9 @@
+%toc
+%title akun's Wiki - Redis
+
 = Redis =
+
+查看配置
 
 {{{
 redis-cli CONFIG GET \*

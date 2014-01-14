@@ -1,117 +1,76 @@
+%toc
+%title akun's Wiki - 首页
+
 = akun's Wiki =
 
-%toc
-
-这里只用来记录零散的知识点，系统的知识直接看官方文档、读书笔记、
-[[http://pm.readthedocs.org/|写的小册子]]或[[http://zhengkun.info/|Blog文章]]
+这里只用来记录零散的知识点，系统的知识直接看官方文档、读书笔记、[[http://pm.readthedocs.org/|写的小册子]]或[[http://zhengkun.info/|Blog文章]]
 
 == 编程语言 ==
 
-* [[Python]]
-* [[JavaScript]]
-* [[Shell]]
-* C
-* Erlang
-* Java
-* [[Ruby]]
+* [[Python]] | [[JavaScript]] | Shell | C | Erlang | Java | [[Ruby]]
+* [[Regex|正则表达式]]
 
-== 编程框架 ==
+=== 编程框架 ===
 
-* [[Django]]
-* [[Tornado]]
-* [[NodeJS]]
-* [[jQuery]]
-* [[AngularJS]]
-* NodeJS
+* [[Django]] | [[Tornado]]
+* [[NodeJS|Node.js]] | [[jQuery]] | AngularJS
+
+=== 程序设计 ===
+
+* [[think|设计杂感]]
+
+=== 软件工程 ===
+
+* [[SE|软件工程杂记]]
+* [[CI|持续集成]]
 
 == 数据库 ==
 
 * [[MySQL]]
-* [[MongoDB]]
-* [[Redis]]
+* [[MongoDB]] | [[Redis]]
 
 == 操作系统 ==
 
+* [[OS|操作系统]]
 * [[Linux]]
 * [[Windows]]
 
 == 网络 ==
 
-* [[TCP_IP|TCP/IP]]
-* [[HTTP]]
+* TCP/IP | [[HTTP]]
 
 == 版本控制 ==
 
-* [[SVN]]
-* [[Git]]
-
-== Web开发 ==
-
-* [[Nginx]]
-
-=== 前端编程 ===
-
-* [[HTML]]
-* [[CSS]]
-* [[FrontEnd/lib|效果库]]
-* Bootstrap
-* [[yeoman]]
-* [[Grunt]]
-
-== 安全 ==
-
-* [[security|安全]]
-
-=== 加密 ===
-
-* [[GPG]]
-
-
-== 可视化 ==
-
-* http://www.gnuplot.info/
-* http://www.graphviz.org/
-* http://processingjs.org/
-* http://mrdoob.github.io/three.js/
-* http://www.evolutionoftheweb.com/
-* 代码爆炸：http://artzub.com/ghv/
-* http://www.explainshell.com/
+* [[SVN]] | [[Git]]
 
 == 编辑器 ==
 
 * [[Vim]]
 
-== 工具 ==
+== 其它工具 ==
 
-* [[VimWiki]]
-* [[Sphinx]]
-* [[PyLint]]
-* [[PuTTY]]
-* [[terminal|终端工具]]
-* [[tools|杂项工具]]
+* [[Sphinx]] | reStructuredText | MarkDow | [[VimWiki]]
+* [[terminal|终端工具]] | [[tools|杂项工具]]
+* [[MindMap|思维导图]] | [[GTD]]
 
-== 软件工程 ==
+== Web开发 ==
 
-* [[SE|软件工程]]
-* [[CI|持续集成]]
-* [[unittest|单元测试]]
+* [[HTML]] | [[CSS]] | CoffeeScript | LESS
+* Bootstrap | [[FrontEnd/lib|效果库]]
+* [[Grunt]] | [[yeoman]]
+* [[Nginx]]
 
-== 设计 ==
+== 可能会深入 ==
 
-* [[think|设计杂感]]
-
-== 经验 ==
-
-* 子域名处理：http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1
-* [[document|文档]]
-
-== 可能会深入的 ==
-
+* [[security|安全]]
+  * [[GPG|GPG加密]]
+* 虚拟化
+  * [[VMware]]
+* [[Visualization|可视化]]
+* [[BigData|大数据]]
 * [[unknown|未归类]]
 
 == 链接 ==
 
-* http://docs.fabfile.org/
-* http://linuxtoy.org/archives/autojump.html
 * http://programming-motherfucker.com/
-* http://resume.github.io/?akun
+* http://resume.github.io/

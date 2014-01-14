@@ -1,3 +1,9 @@
+%toc
+%title akun's Wiki - HTML
+
 = HTML =
 
 * http://www.w3.org/TR/2013/WD-components-intro-20130606
+* https://developers.google.com/chrome-developer-tools/docs/console-api
+* https://developers.google.com/speed/docs/insights/using_chrome
+* https://www.evernote.com/shard/s43/sh/a36fc90e-9f72-43b5-8710-1476340d14ac/1160f515582d297f22f495924ba10d3d

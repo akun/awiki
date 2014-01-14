@@ -1,12 +1,16 @@
+%toc
+%title akun's Wiki - 持续集成
+
 = 持续集成 =
 
-* http://peak.telecommunity.com/DevCenter/setuptools#test-build-package-and-run-a-unittest-suite
-* http://bitten.edgewall.org/wiki/Documentation/commands.html#python-exec
-* http://cloudsizzle.cs.hut.fi/trac/build/trunk/400#step_build
 * http://stackoverflow.com/questions/1407837/is-there-an-rake-equivalent-in-python
 
 
 == Bitten ==
+
+* http://peak.telecommunity.com/DevCenter/setuptools#test-build-package-and-run-a-unittest-suite
+* http://bitten.edgewall.org/wiki/Documentation/commands.html#python-exec
+* http://cloudsizzle.cs.hut.fi/trac/build/trunk/400#step_build
 
 中文支持不好：
 
@@ -19,6 +23,14 @@
     234                         missing_files.remove(filename)
     try except
 }}}
+
+
+忽略：
+* http://bitten.edgewall.org/wiki/BuildRecipes
+* http://bitten.edgewall.org/wiki/Documentation/recipes.html
+
+PyLint：
+* http://bitten.edgewall.org/ticket/233
 
 == Jenkins ==
 

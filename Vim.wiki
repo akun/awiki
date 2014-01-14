@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - Vim
+
 = Vim =
 
 * VIM插件+Python格式检查：http://www.vim.org/scripts/script.php?script_id=2441
@@ -10,7 +13,6 @@
 * V模式（可视模式），进行区块替换
 * 退格键
   * :set backspace=2
-
 
 == 高级操作 ==
 

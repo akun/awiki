@@ -1,60 +1,7 @@
-= Django =
-
 %toc
+%title akun's Wiki - Django
 
-== 熟练度 ==
-
-=== manage.py ===
-python manage.py --help
-
-Usage: manage.py subcommand [options] [args]
-
-* [ ] Options:
-* [X]   --settings=SETTINGS   The Python path to a settings module, e.g.<br>
-                         "myproject.settings.main". If this isn't provided, the<br>
-                         DJANGO_SETTINGS_MODULE environment variable will be<br>
-                         used.
-* [ ]   --pythonpath=PYTHONPATH<br>
-                         A directory to add to the Python path, e.g.<br>
-                         "/home/djangoprojects/myproject".
-* [ ]   --traceback           Print traceback on exception
-* [ ]   --version             show program's version number and exit
-* [X]   -h, --help            show this help message and exit
-
-Type 'manage.py help <subcommand>' for help on a specific subcommand.
-
-Available subcommands:
-* [ ]   cleanup
-* [ ]   compilemessages
-* [ ]   createcachetable
-* [ ]   createsuperuser
-* [X]   dbshell
-* [ ]   diffsettings
-* [ ]   dumpdata
-* [ ]   flush
-* [ ]   inspectdb
-* [ ]   loaddata
-* [ ]   makemessages
-* [ ]   reset
-* [ ]   runfcgi
-* [X]   runserver
-* [ ]   shell
-* [ ]   sql
-* [ ]   sqlall
-* [ ]   sqlclear
-* [ ]   sqlcustom
-* [ ]   sqlflush
-* [ ]   sqlindexes
-* [ ]   sqlinitialdata
-* [ ]   sqlreset
-* [ ]   sqlsequencereset
-* [X]   startapp
-* [X]   syncdb
-* [X]   test
-* [ ]   testserver
-* [ ]   validate
-
-== 源码中各种有用的中间件 ==
+= Django =
 
 == 数据库中的zlib ==
 
@@ -111,7 +58,7 @@ class Mytest(models.Model):
 
 == 序列化 ==
 
-python ui/manage.py loaddata site.json
+python manage.py loaddata site.json
 
 {{{class="brush: python"
 
@@ -173,6 +120,13 @@ FIXTURE_DIRS = (
 python manage.py test user
 }}}
 
+* django session unittest
+
+== Session ==
+
+* http://stackoverflow.com/questions/5542572/django-check-cookies-are-enabled
+* https://docs.djangoproject.com/en/dev/topics/http/sessions/
+
 == 诡异问题 ==
 
 django-admin.py startproject Unknown command: 'startproject'
@@ -231,6 +185,14 @@ def send_zipfile(request):
 DATE_INPUT_FORMATS = ('%Y%m%d',)
 }}}
 
+* SECURE_PROXY_SSL_HEADER，Django的1.4版本以上才能配置
+
+== 表单 ==
+
+{{{
+form.non_field_errors
+}}}
+
 == 模版 ==
 
 {{{
@@ -247,10 +209,30 @@ Django的admin自定义模板：https://docs.djangoproject.com/en/dev/ref/django
 * python manage.py collectstatic -n --noinput
 * http://blog.yangyubo.com/2012/07/26/django-staticfiles/
 
+== class view ==
+
+https://docs.djangoproject.com/en/1.5/ref/class-based-views/flattened-index/
+
+== 修饰器 ==
+
+* require_http_methods(request_method_list)
+* require_GET()
+* require_POST()
+* require_safe()
+  * GET
+  * HEAD
+
 == 不推荐 ==
 
 * simplejson is depresss
 * https://docs.djangoproject.com/en/dev/internals/deprecation/
+
+除非特殊情况，要用Django，不然慎用：
+{{{
+import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'aproject.settings'
+from django.conf import settings
+}}}
 
 == app ==
 
@@ -267,3 +249,64 @@ Django的admin自定义模板：https://docs.djangoproject.com/en/dev/ref/django
 * http://south.aeracode.org/docs/tutorial/part1.html#converting-existing-apps
 * http://south.aeracode.org/docs/tutorial/part1.html#starting-off
 * http://south.readthedocs.org/en/latest/tutorial/part1.html
+
+== 源码中各种有用的中间件 ==
+
+== 熟练度 ==
+
+=== manage.py ===
+python manage.py --help
+
+Usage: manage.py subcommand [options] [args]
+
+* [ ] Options:
+* [X]   --settings=SETTINGS   The Python path to a settings module, e.g.<br>
+                         "myproject.settings.main". If this isn't provided, the<br>
+                         DJANGO_SETTINGS_MODULE environment variable will be<br>
+                         used.
+* [ ]   --pythonpath=PYTHONPATH<br>
+                         A directory to add to the Python path, e.g.<br>
+                         "/home/djangoprojects/myproject".
+* [ ]   --traceback           Print traceback on exception
+* [ ]   --version             show program's version number and exit
+* [X]   -h, --help            show this help message and exit
+
+Type 'manage.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+* [ ]   cleanup
+* [ ]   compilemessages
+* [ ]   createcachetable
+* [ ]   createsuperuser
+* [X]   dbshell
+* [ ]   diffsettings
+* [ ]   dumpdata
+* [ ]   flush
+* [ ]   inspectdb
+* [ ]   loaddata
+* [ ]   makemessages
+* [ ]   reset
+* [ ]   runfcgi
+* [X]   runserver
+* [ ]   shell
+* [ ]   sql
+* [ ]   sqlall
+* [ ]   sqlclear
+* [ ]   sqlcustom
+* [ ]   sqlflush
+* [ ]   sqlindexes
+* [ ]   sqlinitialdata
+* [ ]   sqlreset
+* [ ]   sqlsequencereset
+* [X]   startapp
+* [X]   syncdb
+* [X]   test
+* [ ]   testserver
+* [ ]   validate
+
+python manger.py cleanup 数据过多时候，可能导致数据库崩溃？
+
+
+== 资源 ==
+
+* http://haoluobo.com/trac/wiki/Django

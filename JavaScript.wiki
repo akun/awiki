@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - JavaScipt
+
 = JavaScript =
 
 == 逗号 ==
@@ -5,6 +8,7 @@
 IE下最后结尾不能有逗号，虽然别的浏览器有兼容，但还是不要这么做
 
 错误用法
+
 {{{
 {
   id: 'tid',
@@ -16,26 +20,72 @@ IE下最后结尾不能有逗号，虽然别的浏览器有兼容，但还是不
 
 == trim ==
 
-* JavaScript自带的trim在IE下有兼容问题
-* 用jQuery的$.trim方法各种兼容
+JavaScript自带的trim在IE下有兼容问题，用jQuery的$.trim方法兼容性更好
+
 {{{
 $.trim($(this).text());
 }}}
-
-== 单元测试 ==
-
-* https://github.com/pivotal/jasmine
 
 == escape/unescape ==
 
 不推荐，用下列替代：
 
-* encodeURI()
-* encodeURIComponent()
-* decodeURI()
-* decodeURIComponent()
+{{{
+encodeURI()
+encodeURIComponent()
+decodeURI()
+decodeURIComponent()
+}}}
 
-== 链接 ==
+== JSHint ==
+
+=== 文档 ===
+
+* http://www.jshint.com/docs/
+* http://www.zipeng.info/archives/jshint-intro.html
+
+=== 安装 ===
+
+{{{
+wget http://nodejs.org/dist/v0.10.2/node-v0.10.2.tar.gz
+tar xzvf node-v0.10.2.tar.gz
+cd node-v0.10.2
+./configure --prefix=/usr/local/
+make
+make install
+sudo npm install jshint -g
+}}}
+
+=== 使用 ===
+
+{{{
+vim ~/.jshintrc
+vim ~/.jshintignore
+jshint xxxx.js --verbose --show-non-errors
+}}}
+
+示例：https://github.com/jquery/qunit/blob/master/.jshintrc
+
+== 单元测试 ==
+
+* https://github.com/pivotal/jasmine
+* http://www.infoq.com/cn/articles/javascript-unit-testing
+* http://stackoverflow.com/questions/300855/looking-for-a-better-javascript-unit-test-tool
+* http://upcomingweb.org/2012/08/javascript-testing.html
+* http://lostechies.com/derickbailey/2011/09/06/test-driving-backbone-views-with-jquery-templates-the-jasmine-gem-and-jasmine-jquery/
+* http://blog.davidpadbury.com/2010/10/11/bdd-testing-of-jquery-plugins-using-jasmine/
+* http://twoguysarguing.wordpress.com/2010/11/02/make-javascript-tests-part-of-your-build-qunit-rhino/
+* http://blog.carbonfive.com/2011/07/06/pragmatic-javascript-testing-with-jasmine/
+* http://digitalbush.com/2011/03/29/testing-jquery-plugins-with-node-js-and-jasmine/
+* http://tryjasmine.com/
+
+{{{
+sudo npm install sinon -g
+sudo npm install jasmine-node -g
+sudo npm install jasmine-jquery -g
+}}}
+
+== 其它 ==
 
 * http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 * http://clausreinke.github.io/js-tools/resources.html

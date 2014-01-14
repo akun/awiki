@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - Windows
+
 = Windows =
 
 NTLM：http://www.innovation.ch/personal/ronald/ntlm.html

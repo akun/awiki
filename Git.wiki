@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - Git
+
 = Git =
 
 == diff or same ==
@@ -15,6 +18,8 @@ svn checkout - git clone
 {{{
 git config --global color.diff auto
 }}}
+
+* http://stackoverflow.com/questions/115983/how-do-i-add-an-empty-directory-to-a-git-repository
 
 == Git/SVN ==
 

@@ -1,6 +1,9 @@
+%toc
+%title akun's Wiki - VimWiki
+
 = VimWiki =
 
-Make sure you have these settings in your vimrc file: 
+Make sure you have these settings in your vimrc file:
 
 * set nocompatible
 * filetype plugin on

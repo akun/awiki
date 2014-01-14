@@ -1,64 +1,43 @@
+%toc
+%title akun's Wiki - Python
+
 = Python =
 
-%toc
+== 编程规范 ==
 
-* 日志：http://docs.python.org/2/howto/logging-cookbook.html#logging-cookbook
-
-%% TODO 待整理
-%% 性能分析：https://launchpad.net/meliae
-%% root domain: utils/root_domain.py
-%% print >>output, "wello horld"
-
-== 规范 ==
+文件头
 
 {{{
 #!/usr/bin/env python
 }}}
 
-== 时间 ==
+== 字符串/格式化 ==
+
+切割
 
 {{{
-import psutil
-datetime.datetime.fromtimestamp(psutil.get_boot_time())
-time.localtime(psutil.get_boot_time())
+str.split
+str.splitlines
 }}}
 
-== 异常Hook ==
-
-* http://docs.python.org/2/library/sys.html#sys.excepthook
-
-== 跨平台 ==
-
-* 文件换行，文件路径分割等用os模块提供的常量
-
-== 有意思的 ==
-
-=== 注释技巧 ===
+浮点型格式化失真
 
 {{{
-# TODO: 连调OK
-'''
-return {
-    'can_add': can_add, 'has_error': has_error,
-    'return': api_system_status_return,
-}
-'''
-return {
-    'can_add': True, 'has_error': False,
-    'return': api_system_status_return,
-}
-#'''
-}}}
-
-== 代码片段 ==
-
-{{{
-url.startswith(('http://', 'https://'))
+'%.30f' % 0.00000000000000000000001
 }}}
 
 == datetime & time ==
 
-datetime与time之间的相互转换如下几步：
+{{{
+import datetime
+import time
+import psutil
+boot_time = psutil.get_boot_time()
+datetime.datetime.fromtimestamp(boot_time)
+time.localtime(boot_time)
+}}}
+
+datetime与time之间的相互转换
 
 {{{
 >>> import time, datetime
@@ -79,12 +58,90 @@ datetime.datetime(2008, 10, 31, 12, 50, 29, 578000)
 
 == URL ==
 
+协议头一起判断
+
+{{{
+url.startswith(('http://', 'https://'))
+}}}
+
+Query参数转化为字典
+
 {{{
 >>> u = urlparse.urlparse('http://www.example.com/?username=admin&password=admin')
 >>> dict(urlparse.parse_qsl(u.query))
 {'username': 'admin', 'password': 'admin'}
 }}}
 
+URL拼接
+
+{{{
+from urlparse import urljoin
+}}}
+
+== 日志 ==
+
+* http://www.python.org/dev/peps/pep-0282/
+* http://docs.python.org/2.7/library/logging.config.html#logging.config.dictConfig
+* http://docs.python.org/2/howto/logging-cookbook.html#logging-cookbook
+* http://docs.python.org/2.7/howto/logging.html#logging-advanced-tutorial
+
+== 异常 ==
+
+不推荐
+
+{{{
+>>> raise NotImplemented
+Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+TypeError: exceptions must be old-style classes or derived from BaseException, not NotImplementedType
+}}}
+
+推荐
+
+{{{
+>>> raise NotImplementedError()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NotImplementedError
+}}}
+
+异常Hook
+
+* http://docs.python.org/2/library/sys.html#sys.excepthook
+
+== 线程/进程 ==
+
+Signal使用注意多线程场景
+
+* http://docs.python.org/2/library/signal.html
+
+* os.system
+* os.poepn
+* subprocess
+
+== 跨平台/程序移植性 ==
+
+* 文件换行：os.linesep
+* 文件路径分割：os.path.sep
+* Popen(['grep', grep_pattern], stdin=process_ps.stdout, stdout=PIPE, universal_newlines=True)
+* os.path.join(os.path.abspath(os.path.dirname(__file__)), 'YOUR_FILE_PATH')
+* 慎用os.chdir()或者得配合好os.getcwd()
+
+== 有意思的 ==
+
+=== 注释技巧 ===
+
+{{{
+# XXXX
+'''
+return True
+'''
+return False
+#'''
+}}}
+
 == 疑问 ==
 
 * http://docs.python.org/2/library/inspect.html
+
+%% print >>output, "wello horld"

@@ -1,0 +1,8 @@
+%toc
+%title akun's Wiki - VMware
+
+= VMware =
+
+* 注册虚拟机
+  * http://dngood.blog.51cto.com/446195/768317
+  * 以上操作必须是在VM所在的ESX上进行，不然是无法成功执行的（除了将VM注册到当前ESX中）。因为执行权永远是在VM跑的宿主主机上的。

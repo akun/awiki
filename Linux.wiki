@@ -1,10 +1,103 @@
+%toc
+%title akun's Wiki - Linux
+
 = Linux =
 
 == 命令 ==
 
 === cp ===
 
+{{{
 cp test.py{,.bk}
+}}}
+
+=== sudo ===
+
+sudo重定向：sudo sh -c "route -n > /tmp/haha"
+
+=== ip ===
+
+ip addr add xxx.xxx.xxx.xxx/27 dev eth0
+
+=== ngrep ===
+
+ngrep -d eth1 port 80 -W byline &> /tmp/x.txt
+
+=== find ===
+
+{{{
+find . -name '*.py' | xargs grep 'mem_\|memcache\|MEMCACHE' | awk -F: '{print $1}' | sort | uniq
+}}}
+
+=== tee ===
+
+{{{
+echo "test_test" |tee test.txt
+}}}
+
+=== 杂 ===
+
+* date -d today +"%Y-%m-%d"
+* 反选删除：ls | grep -v 'NOT_DEL' | xargs rm -rf
+* 进程标准输出：tail -f /proc/14383/fd/2
+* 小写转化为大写：echo "Hello" | tr "[:lower:]" "[:upper:]"
+* iconv
+* file
+* comm
+* 查看IPv6：nslookup
+  * set type=AAAA
+* rsync -hvarAEHX --delete --stats --progress --numeric-ids
+* 压缩对比：http://tukaani.org/lzma/benchmarks.html
+* cat /proc/cpuinfo
+* cat /proc/meminfo
+* 先sort再uniq：cat list.txt | sort | uniq | wc
+* 撞库
+  * cat /tmp/a
+  * cat /tmp/b
+  * cat /tmp/a /tmp/b | sort |uniq -d
+* strace -fp
+* touch -t 201206140000
+
+=== free ===
+
+free -m
+
+{{{
+             total       used       free     shared    buffers     cached
+Mem:          3955       1726       2229          0        347        978
+-/+ buffers/cache:        400       3554
+Swap:          964          0        964
+}}}
+
+真正的空闲内存：3554
+
+=== ssh + mysql/mysqldump ===
+
+ssh 端口转发
+
+* ssh -L 3307:localhost:22 xxx.xxx.xxx.xxx -N
+* ssh -L 3307:localhost:3306 xxx.xxx.xxx.xxx -N
+* mysql --host localhost --port 3307 -uroot -p
+
+mysqldump 远程
+
+* http://www.cnblogs.com/pricks/archive/2009/05/27/1490713.html
+* https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/
+
+=== SSH隧道 ===
+
+{{{
+ssh -R 443:xxx.xxx.xxx.xxx:443 username@xxx.xxx.xxx.xxx
+netstat -nap|grep 443
+}}}
+
+=== 公私钥 ===
+
+{{{
+ssh-keygen -e -f license.priv > license.pub
+ssh-keygen -i -f license.pub
+ssh-keygen -i -f license.pub > license.pub
+}}}
 
 === crontab ===
 
@@ -32,69 +125,6 @@ crontab转义：a_file_$(date +\%Y\%m\%d).log
 {{{
 * * * * * sh -x /tmp/dump.sh >> /tmp/$(date +\%Y\%m\%d\%H\%M\%S).log 2>&1
 }}}
-
-=== free ===
-
-free -m
-
-{{{
-             total       used       free     shared    buffers     cached
-Mem:          3955       1726       2229          0        347        978
--/+ buffers/cache:        400       3554
-Swap:          964          0        964
-}}}
-
-真正的空闲内存：3554
-
-=== sudo ===
-
-sudo重定向：sudo sh -c "route -n > /tmp/haha"
-
-=== ip ===
-
-ip addr add xxx.xxx.xxx.xxx/27 dev eth0
-
-=== ngrep ===
-
-ngrep -d eth1 port 80 -W byline &> /tmp/x.txt
-
-=== 杂 ===
-
-* date -d today +"%Y-%m-%d"
-* 反选删除：ls | grep -v 'NOT_DEL' | xargs rm -rf
-* 进程标准输出：tail -f /proc/14383/fd/2
-* 小写转化为大写：echo "Hello" | tr "[:lower:]" "[:upper:]"
-
-=== ssh + mysql/mysqldump ===
-
-ssh 端口转发
-
-* ssh -L 3307:localhost:22 xxx.xxx.xxx.xxx -N
-* ssh -L 3307:localhost:3306 xxx.xxx.xxx.xxx -N
-* mysql --host localhost --port 3307 -uroot -p
-
-mysqldump 远程
-
-* http://www.cnblogs.com/pricks/archive/2009/05/27/1490713.html
-* https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/
-
-
-=== SSH隧道 ===
-
-{{{
-ssh -R 443:xxx.xxx.xxx.xxx:443 username@xxx.xxx.xxx.xxx
-netstat -nap|grep 443
-}}}
-
-=== 其它命令 ===
-
-* iconv
-* file
-* comm
-* 查看IPv6：nslookup
-  * set type=AAAA
-* rsync -hvarAEHX --delete --stats --progress --numeric-ids
-* 压缩对比：http://tukaani.org/lzma/benchmarks.html
 
 == DHCP ==
 
@@ -194,6 +224,8 @@ shared-network名称
 == Make ==
 
 * http://www.yayu.org/book/gnu_make/
+* 设置环境变量
+* if空判断
 
 == Gentoo ==
 

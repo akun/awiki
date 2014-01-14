@@ -1,4 +1,9 @@
+%toc
+%title akun's Wiki - Tornado
+
 = Tornado =
+
+== Debug控制 ==
 
 {{{
 settings = {'debug' : True}

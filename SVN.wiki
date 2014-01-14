@@ -1,30 +1,25 @@
-= SVN =
-
 %toc
+%title akun's Wiki - SVN
 
-== 熟练度 ==
-
-* [X] svn proplist
+= SVN =
 
 == 推荐 ==
 
+* svn实践，保持svn的工作目录是干净的
+* 如果有重大特性，长时间编码，建议开独立特性分支
+* 修复一个缺陷的时候，顺便过滤一遍是否有同类缺陷
+
+== merge ==
+
 * svn merge --dry-run -r 6416:HEAD svn_path .
+* 查看日志，确定需要开始合并的版本号
+* 本次是以分别建立2个分支的版本作为起始版本
+* svn log | less
+* svn log svn_path | less
+* 模拟合并：svn merge --ignore-ancestry --dry-run -r6210:HEAD path .
+* 最好根据2个分支日志记录，一步步手工合并，不要隔了很长时间才合并
 
-查看日志，确定需要开始合并的版本号
-
-本次是以分别建立2个分支的版本作为起始版本
-
-svn log | less
-
-svn log svn_path | less
-
-模拟合并：svn merge --ignore-ancestry --dry-run -r6210:HEAD path .
-
-最好根据2个分支日志记录，一步步手工合并，不要隔了很长时间才合并
-
-== 技巧 ==
-
-svndiff
+== svndiff ==
 
 {{{
 alias svndiff="svn diff | colordiff | less -FRSX"
@@ -34,6 +29,8 @@ alias svndiff="svn diff | colordiff | less -FRSX"
 * http://zalas.eu/viewing-svn-diff-result-in-colors/
 
 == 慎用 ==
+
+=== 清理mergeinfo ===
 
 {{{
 svn merge --ignore-ancestry -c 1234 svn_path
@@ -47,9 +44,19 @@ svn revert .
 svn resolved
 }}}
 
-
-global ignores
+=== global ignores ===
 
 {{{
 svn pg svn:ignore -R .
 }}}
+
+== 统计svn的log ==
+
+{{{
+svn log svn://xxxx | grep '^r[0-9]' | awk -F '|' '{print $2}' > svn.log
+awk -F: '{a[$1]++}END{for (i in a) print i" "a[i]}' svn.log |sort -k2nr
+}}}
+
+== 熟练度 ==
+
+* [X] svn proplist

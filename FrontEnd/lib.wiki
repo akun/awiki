@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - 前端库
+
 = 前端库 =
 
 == 导航 ==
@@ -31,5 +34,37 @@
   * 添加横坐标竖坐标标签：chart.addLabel(60, 5, 'xxxx', 'left', 11, '#000000', 360, '40%', true);
   * 只显示整数：valueAxis.integersOnly = true
 
+== 地图 ==
+
 * 中国地图
   * http://ecomfe.github.io/echarts/doc/example/map3.html
+* http://www.openstreetmap.org/#map=5/51.495/-0.088
+* http://dev.geosprocket.com/d3/finder/
+* http://www.fusioncharts.com/products/suite/fusionmaps-xt/
+* http://jvectormap.com/
+
+== 布局 ==
+
+* http://packery.metafizzy.co/
+* http://isotope.metafizzy.co/
+
+== 上传文件 ==
+
+* http://blueimp.github.io/jQuery-File-Upload/index.html
+
+== 弹出框 ==
+
+* http://nikku.github.io/jquery-bootstrap-scripting/#
+
+== 代码高亮 ==
+
+* http://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html
+
+=== CodeMirror ===
+
+* http://codemirror.net/index.html
+* https://code.google.com/p/google-diff-match-patch/wiki/API
+
+{{{
+xxxx.setSize(900, 80)
+}}}

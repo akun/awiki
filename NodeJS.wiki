@@ -1,17 +1,19 @@
-= NodeJS =
+%toc
+%title akun's Wiki - Node.js
 
-setup in Ubuntu
+= Node.js =
+
+== 安装 ==
+
+Ubuntu ppa
 
 {{{
 sudo apt-get install python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install nodejs
-}}}
 
-while error
-
-{{{
+# while error
 vim /etc/apt/sources.list
 deb http://archive.ubuntu.com/ubuntu precise universe
 }}}

@@ -1,4 +1,7 @@
-= GPG =
+%toc
+%title akun's Wiki - GPG加密
+
+= GPG加密 =
 
 参考：
 

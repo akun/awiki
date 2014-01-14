@@ -1,6 +1,11 @@
+%toc
+%title akun's Wiki - 安全
+
 = 安全 =
 
 * 威胁是外部的
 * 弱点是系统本身的
 * 风险是威胁利用弱点的可能性
-* 事件是可记录性
+* 事件是记录
+
+https://developers.shodan.io/

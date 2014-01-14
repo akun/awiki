@@ -1,25 +1,18 @@
+%toc
+%title akun's Wiki - 未归类
+
 = 未归类 =
 
-== Leo ==
+== 编译 ==
 
-* http://wiki.woodpecker.org.cn/moin/LeoEnvironment
+* http://www.yinwang.org/blog-cn/2013/03/08/on-syntax/
 
-== Trac ==
+== 域名 ==
 
-* http://virtual-planner.palepurple.co.uk/wiki/django-installation
-* http://virtual-planner.palepurple.co.uk/wiki/NotifyPlugin
-* http://trac-hacks.org/wiki/SubticketsPlugin
-* http://www.elias.cn/Develop/TracMini
-
-== SQLAlchemy ==
-
-*  http://www.sqlalchemy.org/docs/search.html?q=create_all&check_keywords=yes&area=default
+* 子域名处理：http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1
+%% root domain: utils/root_domain.py
 
 == NoSQL graph database ==
 
 * http://neo4j.org/
 * http://www.readwriteweb.com/cloud/2011/04/5-graph-databases-to-consider.php
-
-== 编译 ==
-
-* http://www.yinwang.org/blog-cn/2013/03/08/on-syntax/

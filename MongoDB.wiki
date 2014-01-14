@@ -1,43 +1,89 @@
+%toc
+%title akun's Wiki - MongoDB
+
 = MongoDB =
-
-* 释放MongoDB空间慎用：http://dikar.iteye.com/blog/1028243
-* 文档学习：http://wenku.it168.com/redian/mongoDB/
-* 必须明确指定类型：db.data.update({'name': 'zero'}, {'$set': {'value': NumberInt(0)}})
-* 调式MapReduce：http://stackoverflow.com/questions/7527126/mongodb-how-to-debug-map-reduce-on-mongodb-shell
-  * print + 看日志
-* MapReduce必须存在collection：http://stackoverflow.com/questions/10284048/mongodb-map-reduce-to-get-uniques-by-date-day
-* pymongo的save方法要慎用
-* 后台索引：db.people.ensureIndex( { zipcode: 1}, {background: true} )
-* http://stackoverflow.com/questions/10298354/cursor-id-not-valid-error
-
-setup in Ubuntu
-
-http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 == 经验 ==
 
+* MapReduce必须存在collection：http://stackoverflow.com/questions/10284048/mongodb-map-reduce-to-get-uniques-by-date-day
+* 必须明确指定类型：db.data.update({'name': 'zero'}, {'$set': {'value': NumberInt(0)}})
 * 判断是否有记录用find_one，别用count，效率更好
 * profile：http://docs.mongodb.org/manual/tutorial/manage-the-database-profiler/
 * 最大连接数：http://www.qttc.net/201304300.html
 * 从数据库长时间没同步数据：http://stackoverflow.com/questions/11537977/rs102-mongodb-on-replicaset
 * MapReduce优化：http://www.iteye.com/news/28013
-
-== 有用命令 ==
-
+* for doc in coll.find(timeout=False)
+* '$exists':true不使用索引
+* mongoDB的MapReduce路线图计划
+* 清理文件磁盘空间等运维
+* MongoDB性能实测
 * 集群状态：mongostat --discover
+* db.currentOp().inprog.forEach(function(i) {db.killOp(i.opid)})
+* mongoexport -q "{key1: 'xxxx', 'key2': 'yyyy'}" -d dbname -c collection_name -f 'f1,f2' --csv -o x.csv
+* 释放MongoDB空间慎用：http://dikar.iteye.com/blog/1028243
+* 文档学习：http://wenku.it168.com/redian/mongoDB/
+* pymongo的save方法要慎用
+* 后台索引：db.people.ensureIndex( { zipcode: 1}, {background: true} )
+* http://stackoverflow.com/questions/10298354/cursor-id-not-valid-error
+* 调式MapReduce：http://stackoverflow.com/questions/7527126/mongodb-how-to-debug-map-reduce-on-mongodb-shell
+  * print + 看日志
+* setup in Ubuntu
+  * http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+* mongodb索引后台执行
+  * mongodb的后台执行建立索引没有效果？
+* mongodb多少时间超时
+  * pymongo的safe机制
+* 数据的unset或set
+  * http://docs.mongodb.org/manual/core/update/#update-arrays
+  * http://stackoverflow.com/questions/8879623/mongodb-unset-an-attribute-from-a-single-array-element
+* 存在local文件，遗留的
+  * ERROR: child process failed, exited with error number 100
+  * --repair方式启动
+* Document Size
+  * 16M
+  * http://docs.mongodb.org/manual/reference/limits/?highlight=size#BSON
+* capped collection
+  * Capped Collections可以insert和update操作，更新也有限制大小；不能delete操作。只能用drop方法删除整个Collection。
+  * 怎么把capped转化回来？
+* show collections有个stats
+  * 貌似shell下也行
+  * 有个drop命令
+  * db.listCommands()
+  * db.runCommand
+  * db.drop_collection('stats')
 
 == PyMongo ==
 
 * find_and_modify
   * Returns either the object before or after modification based on new parameter. If no objects match the query and upsert is false, returns None. If upserting and new is false, returns {}.
 
-会自动生成ID
+=== 会自动生成ID ===
 
 {{{
 ObjectId()
 ObjectId(None)
 }}}
 
+=== sort ===
+
+{{{
+[(key1, 1), (key2, -1)]
+}}}
+
+== MongoKit ==
+
+MongKit关心库的考虑点
+
+* 连接数
+* 替换的方法可靠性
+
+=== 经验 ===
+
+* Bulk and atomic updates，直接用了pymongo，所以没有做校验了
+* 默认缺省_id即可
+* connection.MyDoc.collection.remove({'_id':{'$in':[ObjectId(...), ObjectId(...), ...]}}
+* 数据类型宽松unicode和str：basestring
+
 == mms ==
 
-实际是封装db.serverStatus()的结果信息
+* 实际是封装db.serverStatus()的结果信息

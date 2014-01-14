@@ -1,6 +1,9 @@
+%toc
+%title akun's Wiki - Ruby
+
 = Ruby =
 
-
+== 安装 ==
 
 {{{
 sudo apt-get install libopenssl-ruby
@@ -15,4 +18,8 @@ http://ruby.taobao.org
 # $ gem install rails
 }}}
 
+== 库 ==
+
+{{{
 gem install compass
+}}}

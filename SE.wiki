@@ -1,4 +1,9 @@
-= 软件工程 =
+%toc
+%title akun's Wiki - 软件工程杂记
+
+= 软件工程杂记 =
+
+* 你认为没问题的地方，还是会有问题
 
 == 有意思的比喻 ==
 
@@ -15,3 +20,39 @@ http://www.aqee.net/why-testers-are-not-the-goalkeepers-of-bugs/
 祝一切顺利
 
 :)
+
+== 软件版本周期 ==
+
+* https://zh.wikipedia.org/zh-cn/軟件版本週期
+
+== SCM ==
+
+* https://code.google.com/p/kcpycamp/wiki/HowtoScm
+
+== code review ==
+
+* 其实code review的量很少的，研发大多数时间还是在想设计
+* 平时code review实践，以2-3人，审阅一个模块代码
+* 有个类似工单跟踪会很好
+* 可以各种评论
+
+== Joel法则 ==
+
+* http://www.joelonsoftware.com/articles/fog0000000043.html
+* http://chinese.joelonsoftware.com/Articles/TheJoelTest.html
+
+== 文档 ==
+
+* 写文档：给看的人
+* 讲文档：不一定给看的人
+
+== 流程图 =
+
+* 不要把所有内容放到一个流程图、构架途中
+* 一个说不清，拆分为多个说明
+
+http://wiki.mbalib.com/zh-tw/流程图
+
+== 单元测试 ==
+
+* http://www.yinwang.org/blog-cn/2013/04/07/test-driven-dev

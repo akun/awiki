@@ -1,0 +1,15 @@
+%toc
+%title akun's Wiki - 可视化
+
+= 可视化 =
+
+* http://www.gnuplot.info/
+* http://www.graphviz.org/
+* http://processingjs.org/
+* http://mrdoob.github.io/three.js/
+* http://www.evolutionoftheweb.com/
+* 代码爆炸
+  * http://artzub.com/ghv/
+  * http://blog.xupeng.me/2012/01/12/code-swarm/
+* http://www.explainshell.com/
+* https://www.debuggex.com/

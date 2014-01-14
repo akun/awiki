@@ -1,9 +1,26 @@
+%toc
+%title akun's Wiki - Sphinx
+
 = Sphinx =
+
+* http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+* 中文
+  * http://sphinx-doc-zh.readthedocs.org/en/latest/
+  * http://docs.kissyui.com/docs/html/tutorials/tools/use-sphinx.html
+
+* 去除空格：eStructuredText中如果想在链接两边去除空格，则需要使用"\"转义，例如“没有\ 空格_\就对了。”
+* 自定义链接：http://sphinx-doc.org/latest/ext/extlinks.html
+* 插件：https://bitbucket.org/birkenfeld/sphinx-contrib
+* 结合readthedocs.org：http://blog.csdn.net/wdove/article/details/6856512
+* 去引号：http://hyry.dip.jp:8000/pydoc/pydoc_write_tools.html
+* Django
+  * export DJANGO_SETTINGS_MODULE=aproject.settings
+  * http://stackoverflow.com/questions/7733577/how-to-build-sphinx-documentation-for-django-project
+  * initial_data.[xml/yaml/json]
+  * python manage.py syncdb --database=dbname
+* 小字
 
 {{{
 :sup:`新`
 :sub:`新`
 }}}
-
-* http://sphinx-doc.org/latest/ext/extlinks.html
-* https://bitbucket.org/birkenfeld/sphinx-contrib

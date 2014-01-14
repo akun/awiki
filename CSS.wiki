@@ -1,3 +1,6 @@
+%toc
+%title akun's Wiki - CSS
+
 = CSS =
 
 == 取消float效果 ==

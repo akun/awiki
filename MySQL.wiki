@@ -1,5 +1,7 @@
-= MySQL =
+%toc
+%title akun's Wiki - MySQL
 
+= MySQL =
 
 == 查询结果到文件 ==
 
@@ -9,15 +11,11 @@ SELECT * INTO OUTFILE 'file_name' FROM table_name;
 SELECT * FROM table_name INTO OUTFILE 'file_name';
 }}}
 
-== 遍dump遍压缩 ==
+== 边dump边压缩 ==
 
 {{{
 mysqldump -uusername -p database | gzip > database.sql.gz
 }}}
-
-
-== 增加用户 ==
-
 
 == 修改表结构 ==
 
@@ -35,10 +33,14 @@ mysqldump -uusername -p database | gzip > database.sql.gz
 SHOW SESSION STATUS LIKE 'Handler_read%';
 }}}
 
-== 慢日志 ==
-
 == 列互相更新 ==
 
 {{{
 UPDATE table_name SET a=b, b=a;
 }}}
+
+== 变量赋值 ==
+
+== 慢日志 ==
+
+== 增加用户 ==

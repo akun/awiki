@@ -1,25 +1,7 @@
+%toc
+%title akun's Wiki - 杂项工具
+
 = 杂项工具 =
-
-* 截图命令行：imagemagick
-* 类似grep：http://betterthangrep.com/
-* http://www.harding.motd.ca/autossh/
-* PIL fork：https://github.com/python-imaging/Pillow
-* curl ifconfig.me
-* Python2.7前：https://pypi.python.org/pypi/argparse
-* psutil
-* http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
-* http://dag.wiee.rs/home-made/dstat/
-* http://www.vagrantup.com/
-* https://pypi.python.org/pypi/cchardet/0.3.5
-
-== CodeMirror ==
-
-* http://codemirror.net/index.html
-* https://code.google.com/p/google-diff-match-patch/wiki/API
-
-{{{
-xxxx.setSize(900, 80)
-}}}
 
 == requests ==
 
@@ -37,8 +19,86 @@ xxxx.setSize(900, 80)
 
 * pip install 直接跟文件
 
+== pexpect ==
+
+{{{
+child = pexpect.spawn('/bin/bash -c "ls -l | grep LOG > log_list.txt"')
+child.expect(pexpect.EOF)
+}}}
+
+== graphviz ==
+
+* http://pycallgraph.slowchop.com/
+
+{{{
+sudo apt-get install graphviz
+
+# -Gsize="340,340"
+}}}
+
+== JSON Schema ==
+
+* https://pypi.python.org/pypi/jsonschema
+
+== PyLint ==
+
+* 安装
+* pylint --persistent=n --generate-rcfile > .pylintrc
+* 看需要修改.pylintrc配置，例如：
+  * indent-string='\t'
+  * --max-line-length=200
+  * --generated-members=objects
+
+常用
+* pylint -E example.py
+* http://docs.pylint.org/run.html?highlight=ignore
+
+== Trac ==
+
+* Trac的Wiki小技巧，Wiki模版
+* Trac1.0后很多插件兼容性不好
+* http://virtual-planner.palepurple.co.uk/wiki/django-installation
+* http://virtual-planner.palepurple.co.uk/wiki/NotifyPlugin
+* http://trac-hacks.org/wiki/SubticketsPlugin
+* http://www.elias.cn/Develop/TracMini
+
+== SQLAlchemy ==
+
+*  http://www.sqlalchemy.org/docs/search.html?q=create_all&check_keywords=yes&area=default
+
+== ab ==
+
+* http://cjxixi.iteye.com/blog/919846
+* 结合curl：http://www.zhaokunyao.com/archives/3001
+* ab -n 100 -c 100 -v 1 -C "sessionid=cc4fcbaae6f559cd9bff4715f8980afe" http://xxxx/
+* ab -n 10 -c 1 -v 1 -C "sessionid=cc4fcbaae6f559cd9bff4715f8980afe" -T "application/x-www-form-urlencoded" -p /tmp/post.txt http://xxxx/
+* a=1&b=2
+
 == 调试 ==
 
 {{{
 <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
 }}}
+
+== Leo ==
+
+* http://wiki.woodpecker.org.cn/moin/LeoEnvironment
+
+== 其它 ==
+
+* 截图命令行：imagemagick
+* 类似grep：http://betterthangrep.com/
+* http://www.harding.motd.ca/autossh/
+* PIL fork：https://github.com/python-imaging/Pillow
+* curl ifconfig.me
+* Python2.7前：https://pypi.python.org/pypi/argparse
+* psutil
+* http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
+* http://dag.wiee.rs/home-made/dstat/
+* http://www.vagrantup.com/
+* https://pypi.python.org/pypi/cchardet/0.3.5
+* zoomit
+* https://github.com/gabrielfalcao/HTTPretty
+* 性能分析：https://launchpad.net/meliae
+* http://linuxtoy.org/archives/autojump.html
+* http://docs.fabfile.org/
