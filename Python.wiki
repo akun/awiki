@@ -26,6 +26,19 @@ str.splitlines
 '%.30f' % 0.00000000000000000000001
 }}}
 
+
+删除控制字符串
+
+{{{
+'x\r\n\t\bx'.translate(None, ''.join([chr(x) for x in range(32) + [127]]))
+}}}
+
+文件名后缀
+
+{{{
+module_name, ext = os.path.splitext(filename)
+}}}
+
 == datetime & time ==
 
 {{{

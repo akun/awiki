@@ -36,8 +36,25 @@ tmux kill-window -t 9
 
 http://blog.csdn.net/gilzhy/article/details/8799446
 
+分屏
+
+{{{
+Ctrl + b + %
+}}}
+
+重命名
+
+{{{
+Ctrl + b + ,
+}}}
+
 == PuTTY ==
 
 * Window -> Control the scrollback in the window -> Lines of scrollback -> 20000
 * Window -> Translation -> Character set translation on received data -> UTF-8
 * Connection -> Sending of null packets to keep session active -> 60
+
+终端卡住处理
+
+* Ctrl + S表示停止向终端输出
+* Ctrl + Q恢复向终端输出
