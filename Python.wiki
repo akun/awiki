@@ -132,6 +132,37 @@ Signal使用注意多线程场景
 * os.poepn
 * subprocess
 
+队列和进程fork
+
+{{{
+#!/usr/bin/env python
+
+
+import os
+import multiprocessing
+
+
+def my_fork():
+    alist = [1, 2]
+    aqueue = multiprocessing.Queue(maxsize=2)
+    aqueue.put(2)
+    aqueue.put(1)
+
+    child_pid = os.fork()
+
+    if child_pid == 0:
+        print 'Child Process: PID# %s' % os.getpid()
+        print 'Wrong', alist, id(alist), id(alist[0]), id(alist[1]), alist.pop()
+        print 'Right', aqueue.get()
+    else:
+        print 'Parent Process: PID# %s' % os.getpid()
+        print 'Wrong', alist, id(alist), id(alist[0]), id(alist[1]), alist.pop()
+        print 'Right', aqueue.get()
+
+if __name__ == '__main__':
+    my_fork()
+}}}
+
 == 跨平台/程序移植性 ==
 
 * 文件换行：os.linesep

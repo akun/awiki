@@ -30,16 +30,22 @@
 
 == tmux ==
 
+杀死某个编号的窗口
+
 {{{
 tmux kill-window -t 9
 }}}
 
-http://blog.csdn.net/gilzhy/article/details/8799446
-
-分屏
+垂直分屏
 
 {{{
 Ctrl + b + %
+}}}
+
+水平分屏
+
+{{{
+Ctrl + b + "
 }}}
 
 重命名
@@ -47,6 +53,36 @@ Ctrl + b + %
 {{{
 Ctrl + b + ,
 }}}
+
+分屏间复制
+
+{{{
+vim ~/.tmux.conf输入下列：
+
+set-window-option -g mode-keys vi
+
+1. 进入复制模式：Ctrl + b + [
+2. 按 Space 开始复制，移动光标选择复制区域
+3. 按 Enter 复制并退出copy-mode
+4. 将光标移动到指定位置，粘贴按：Ctrl + b + ]
+}}}
+
+绑定键替换
+
+{{{
+vim ~/.tmux.conf输入下列：
+
+set -g prefix C-a
+unbind C-b
+
+生效在命令模式（按Ctrl + b + : )输入：
+
+source-file ~/.tmux.conf
+}}}
+
+链接
+
+* http://blog.csdn.net/gilzhy/article/details/8799446
 
 == PuTTY ==
 
