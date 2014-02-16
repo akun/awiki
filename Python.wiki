@@ -11,6 +11,14 @@
 #!/usr/bin/env python
 }}}
 
+哑元素
+
+如果某个tuple值不再后面用，可以写成这样
+
+{{{
+stdout, _ = get_tuple()
+}}}
+
 == 字符串/格式化 ==
 
 切割
@@ -33,11 +41,14 @@ str.splitlines
 'x\r\n\t\bx'.translate(None, ''.join([chr(x) for x in range(32) + [127]]))
 }}}
 
+http://svn.python.org/projects/python/trunk/Lib/curses/ascii.py
+
 文件名后缀
 
 {{{
 module_name, ext = os.path.splitext(filename)
 }}}
+
 
 == datetime & time ==
 
@@ -97,6 +108,11 @@ from urlparse import urljoin
 * http://docs.python.org/2.7/library/logging.config.html#logging.config.dictConfig
 * http://docs.python.org/2/howto/logging-cookbook.html#logging-cookbook
 * http://docs.python.org/2.7/howto/logging.html#logging-advanced-tutorial
+
+多进程写同文件日志的问题：
+
+* http://docs.python.org/2/howto/logging-cookbook.html#logging-to-a-single-file-from-multiple-processes
+* http://plumberjack.blogspot.com/2010/09/using-logging-with-multiprocessing.html
 
 == 异常 ==
 

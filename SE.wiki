@@ -45,6 +45,7 @@ http://www.aqee.net/why-testers-are-not-the-goalkeepers-of-bugs/
 
 * 写文档：给看的人
 * 讲文档：不一定给看的人
+* 问题描述只描述问题定义
 
 == 流程图 =
 

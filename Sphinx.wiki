@@ -24,3 +24,31 @@
 :sup:`新`
 :sub:`新`
 }}}
+
+== Vim插件 ==
+
+在Vim下用Sphinx写文档，使用riv.vim更好得进行编辑
+
+=== section ===
+
+快速成为一级标题，其它几级标题类似
+
+{{{
+Ctrl + e + s + 1
+}}}
+
+https://github.com/Rykka/riv.vim/blob/master/doc/riv_instruction.rst#sections
+
+=== table ===
+
+自动生成表格，以及自动格式化表格
+
+{{{
+Ctrl + e + t + c
+}}}
+
+* https://github.com/Rykka/riv.vim/blob/master/doc/riv_quickstart.rst#table
+
+== 文章 ==
+
+* http://tompurl.com/2012/11/22/writing-a-book-with-vim-restructured-text-and-sphinx/

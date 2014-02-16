@@ -3,6 +3,15 @@
 
 = Linux =
 
+== file format ==
+
+* http://stackoverflow.com/questions/811193/how-to-convert-the-m-linebreak-to-normal-linebreak-in-a-file
+* http://docs.editorconfig.org/en/master/editorconfig-format.html
+
+{{{
+for f in `find . -name '*.html'`;do vi +':w ++ff=unix' +':q' $f; done
+}}}
+
 == 命令 ==
 
 === cp ===
@@ -235,6 +244,41 @@ shared-network名称
   * http://forum.linuxfans.org/archiver/?tid-163567.html
 
 == Ubuntu ==
+
+=== 网卡 ===
+
+Ubuntu有时候启动不了，卡在网卡那：
+
+* https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/512253
+* /etc/network/interfaces写错了格式
+* 引导盘启动后，更正后就可以启动
+
+收集网卡信息：
+
+* cat /proc/net/dev
+
+Bond方式绑定网卡：
+
+http://itxx.sinaapp.com/blog/content/144\
+
+{{{
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth1 inet manual
+bond-master bond0
+
+auto eth1
+iface eth2 inet manual
+bond-master bond0
+
+iface bond0 inet static
+address xxx.xxx.xxx.xxx
+netmask xxx.xxx.xxx.xxx
+gateway xxx.xxx.xxx.xxx
+bond-salves none
+}}}
 
 === ppa ===
 
