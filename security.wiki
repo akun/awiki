@@ -8,4 +8,7 @@
 * 风险是威胁利用弱点的可能性
 * 事件是记录
 
-https://developers.shodan.io/
+== 资源 ==
+
+* https://developers.shodan.io/
+* http://pic.dhe.ibm.com/infocenter/asehelp/v8r0m0/index.jsp?topic=%2Fcom.ibm.ase.help.doc%2Ftopics%2Fr_wasc_threat_classifications_report.html 

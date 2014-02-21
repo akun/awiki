@@ -30,3 +30,12 @@ svn log svn://xxx --xml | grep -P "^<author" | sort -u | perl -pe 's/<author>(.*
 }}}
 
 问题：可能会差个东8区，时区的考虑
+
+== 特性 ==
+
+submodule坑：http://blog.devtang.com/blog/2013/05/08/git-submodule-issues/
+
+== 资料 ==
+
+* http://git-scm.com/book/zh/
+* Android开发流程中的Git：http://source.android.com/source/developing.html

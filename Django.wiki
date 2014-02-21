@@ -204,6 +204,14 @@ forloop.parentloop.counter
 
 Django的admin自定义模板：https://docs.djangoproject.com/en/dev/ref/django-admin/#custom-app-and-project-templates
 
+相等判断，对象类型不会自动转化对应字符串，例如：MongoDB的ID
+
+{{{
+{% ifequal doc|mongo_id id %}
+}}}
+
+如果id是字符串，doc|mongo_id是ObjectId，这样等号不成立
+
 == 静态资源 ==
 
 * python manage.py collectstatic -n --noinput

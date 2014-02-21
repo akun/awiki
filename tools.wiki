@@ -84,6 +84,16 @@ sudo apt-get install graphviz
 
 * http://wiki.woodpecker.org.cn/moin/LeoEnvironment
 
+== FGFW ==
+
+* Chrome插件：SwitchySharp
+* 选择socket
+* 借助plink：http://ethertubes.com/dynamic-socks-proxy-with-plink-exe-and-firefox/
+
+{{{
+plink -ssh -T -D 9527 username@example.com
+}}}
+
 == 其它 ==
 
 * 截图命令行：imagemagick

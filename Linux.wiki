@@ -14,6 +14,12 @@ for f in `find . -name '*.html'`;do vi +':w ++ff=unix' +':q' $f; done
 
 == 命令 ==
 
+=== 清理屏幕 ===
+
+{{{
+clear  # 快捷键：Ctrl + L
+}}}
+
 === cp ===
 
 {{{
@@ -42,6 +48,38 @@ find . -name '*.py' | xargs grep 'mem_\|memcache\|MEMCACHE' | awk -F: '{print $1
 
 {{{
 echo "test_test" |tee test.txt
+}}}
+
+=== sort ===
+
+逆序，按第二列数字大小排列
+
+{{{
+sort -nrk2
+}}}
+
+=== ln ===
+
+符号链接
+
+{{{
+ln -s /path/to/real/ fake
+}}}
+
+=== rm ===
+
+删除带横杠的文件
+
+{{{
+rm -- -damnit
+}}}
+
+=== id ===
+
+查看用户
+
+{{{
+id username
 }}}
 
 === 杂 ===

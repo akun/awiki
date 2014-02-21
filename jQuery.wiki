@@ -5,3 +5,9 @@
 
 * 浮动用animate
 * http://api.jquery.com/jQuery.isFunction/
+
+select的option选中
+
+{{{
+$('option:selected')
+}}}
