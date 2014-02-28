@@ -25,6 +25,12 @@
 :sub:`新`
 }}}
 
+* 下载链接
+
+{{{
+:download:`我是名称 <path/to/download/file.txt>`
+}}}
+
 == Vim插件 ==
 
 在Vim下用Sphinx写文档，使用riv.vim更好得进行编辑

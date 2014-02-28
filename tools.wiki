@@ -94,6 +94,13 @@ sudo apt-get install graphviz
 plink -ssh -T -D 9527 username@example.com
 }}}
 
+* GoAgent：https://code.google.com/p/goagent/
+* hosts修改：Win下
+
+{{{
+C:\Windows\System32\drivers\etc\hosts
+}}}
+
 == 其它 ==
 
 * 截图命令行：imagemagick

@@ -51,6 +51,8 @@
   * db.listCommands()
   * db.runCommand
   * db.drop_collection('stats')
+* Shell下find的格式化输出
+  * db.collection.find().pretty()
 
 == PyMongo ==
 
