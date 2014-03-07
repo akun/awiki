@@ -187,6 +187,12 @@ if __name__ == '__main__':
 * os.path.join(os.path.abspath(os.path.dirname(__file__)), 'YOUR_FILE_PATH')
 * 慎用os.chdir()或者得配合好os.getcwd()
 
+== 发布工具 ==
+
+发布包含文件：MANIFEST.in
+
+* http://docs.python.org/2/distutils/sourcedist.html#the-manifest-in-template
+
 == 有意思的 ==
 
 === 注释技巧 ===

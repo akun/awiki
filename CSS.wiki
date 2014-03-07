@@ -16,3 +16,7 @@
 {{{
 #wrap{word-break:break-all; width:200px;}
 }}}
+
+== 工具 ==
+
+HEX和RGB转化：http://www.javascripter.net/faq/hextorgb.htm

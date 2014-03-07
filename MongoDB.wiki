@@ -53,6 +53,7 @@
   * db.drop_collection('stats')
 * Shell下find的格式化输出
   * db.collection.find().pretty()
+* MapReduce写法逻辑摆放要注意，单条记录时候不会进行Reduce，所以必要的逻辑要写到Map中
 
 == PyMongo ==
 

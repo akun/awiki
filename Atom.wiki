@@ -1,0 +1,10 @@
+%toc
+%title akun's Wiki - Atom
+
+链接：https://gist.github.com/JeremyWei/9341062
+
+{{{
+curl -L https://www.atom.io/api/updates/download -A "Atom/0.1 CFNetwork/1.5" > Atom.zip
+unzip Atom.zip
+mv Atom.app /Applications/
+}}}

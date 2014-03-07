@@ -3,6 +3,32 @@
 
 = 杂项工具 =
 
+== nose ==
+
+* nose的Django插件写法：http://pydoc.net/Python/NoseDjango/0.8.1/nosedjango.nosedjango/
+* 输出测试时候的print：--nocapture
+
+== MongoKit ==
+
+扁平化字典：
+
+{{{
+from mongokit.helpers import DotCollapsedDict
+}}}
+
+验证列表类型的嵌套
+
+* http://stackoverflow.com/questions/15455506/mongokit-validate-dict-inside-list
+
+坑：数据结构定义时候名字不能用db，会冲突
+
+
+== coverage ==
+
+测试代码覆盖率，可以结合nose：
+
+* https://pypi.python.org/pypi/coverage
+
 == requests ==
 
 * https://github.com/kennethreitz/requests/blob/master/requests/models.py#L399
@@ -18,6 +44,7 @@
 == pip ==
 
 * pip install 直接跟文件
+* 指定镜像网站：pip install django -i http://pypi.v2ex.com/simple/
 
 == pexpect ==
 

@@ -20,6 +20,12 @@ for f in `find . -name '*.html'`;do vi +':w ++ff=unix' +':q' $f; done
 clear  # 快捷键：Ctrl + L
 }}}
 
+=== 边下载边显示进度边解压 ===
+
+{{{
+curl --progress http://nginx.org/download/nginx-1.4.6.tar.gz | tar xz
+}}}
+
 === cp ===
 
 {{{

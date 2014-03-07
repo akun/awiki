@@ -41,6 +41,10 @@ http://www.aqee.net/why-testers-are-not-the-goalkeepers-of-bugs/
 * http://www.joelonsoftware.com/articles/fog0000000043.html
 * http://chinese.joelonsoftware.com/Articles/TheJoelTest.html
 
+== 沟通 ==
+
+* 沟通的意思是，不是你说了什么，而是对方听到了什么
+
 == 文档 ==
 
 * 写文档：给看的人
