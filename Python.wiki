@@ -21,6 +21,12 @@ stdout, _ = get_tuple()
 
 == 字符串/格式化 ==
 
+连接
+
+{{{
+"hello{0}""world{0}".format(10)
+}}}
+
 切割
 
 {{{

@@ -11,7 +11,38 @@ svn commit   - git push
 svn log      - git log
 svn checkout - git clone
 
+== 常用命令 ==
+
+{{{
+git remote add remotename git@xxx.xxx.xxx.xxx:usernmae/project.git
+git remote rm remotename
+git fetch remotename
+git show-ref
+git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
+}}}
+
 == 技巧 ==
+
+diff暂存区
+
+{{{
+git diff --staged
+}}}
+
+分支风格的log输出
+
+* http://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
+
+{{{
+git log --graph --oneline
+}}}
+
+重写
+
+{{{
+git rebase -i HEAD~3
+git push remotename HEAD:master -f
+}}}
 
 颜色
 
@@ -62,3 +93,6 @@ submodule坑：http://blog.devtang.com/blog/2013/05/08/git-submodule-issues/
 
 * http://git-scm.com/book/zh/
 * Android开发流程中的Git：http://source.android.com/source/developing.html
+* 分支建议：
+  * 中文：http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/
+  * 英文：http://nvie.com/posts/a-successful-git-branching-model/

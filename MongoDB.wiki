@@ -5,6 +5,7 @@
 
 == 经验 ==
 
+* 对比字段值相等：db.collection.find({$where: "this.a1.a == this.a2.a"})
 * MapReduce必须存在collection：http://stackoverflow.com/questions/10284048/mongodb-map-reduce-to-get-uniques-by-date-day
 * 必须明确指定类型：db.data.update({'name': 'zero'}, {'$set': {'value': NumberInt(0)}})
 * 判断是否有记录用find_one，别用count，效率更好

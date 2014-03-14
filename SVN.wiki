@@ -9,6 +9,20 @@
 * 如果有重大特性，长时间编码，建议开独立特性分支
 * 修复一个缺陷的时候，顺便过滤一遍是否有同类缺陷
 
+== 技巧 ==
+
+忽略外链
+
+{{{
+svn up --ignore-externals
+}}}
+
+递归恢复
+
+{{{
+svn revert -R .
+}}}
+
 == merge ==
 
 * svn merge --dry-run -r 6416:HEAD svn_path .

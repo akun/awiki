@@ -12,6 +12,16 @@
 for f in `find . -name '*.html'`;do vi +':w ++ff=unix' +':q' $f; done
 }}}
 
+== bash ==
+
+目录颜色修改
+
+* http://www.geekgumbo.com/2011/11/04/changing-the-directory-color-in-the-bash-shell/
+
+{{{
+LS_COLORS='di=0;35' ; export LS_COLORS
+}}}
+
 == 命令 ==
 
 === 清理屏幕 ===
