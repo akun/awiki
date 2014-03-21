@@ -21,6 +21,10 @@ git show-ref
 git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
 }}}
 
+== 经验 ==
+
+《Git 少用 Pull 多用 Fetch 和 Merge》：http://www.oschina.net/translate/git-fetch-and-merge
+
 == 技巧 ==
 
 diff暂存区

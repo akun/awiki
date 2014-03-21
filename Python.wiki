@@ -19,6 +19,16 @@
 stdout, _ = get_tuple()
 }}}
 
+== 等差划分数列 ==
+
+{{{
+def divice_list_to_eaual_part(top, part_size):
+    return [(i, i + part_size) for i in range(0, top, part_size)]  # yeild -> ()
+
+if __name__ == '__main__':
+    print divice_list_to_eaual_part(1500, 500)
+}}}
+
 == 字符串/格式化 ==
 
 连接

@@ -46,6 +46,14 @@ from mongokit.helpers import DotCollapsedDict
 * pip install 直接跟文件
 * 指定镜像网站：pip install django -i http://pypi.v2ex.com/simple/
 
+== virtualenv ==
+
+命令行上下文在虚拟环境中
+
+{{{
+source ~/aproject/bin/activate
+}}}
+
 == pexpect ==
 
 {{{

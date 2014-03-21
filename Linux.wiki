@@ -22,6 +22,22 @@ for f in `find . -name '*.html'`;do vi +':w ++ff=unix' +':q' $f; done
 LS_COLORS='di=0;35' ; export LS_COLORS
 }}}
 
+== Syslog ==
+
+Ubuntu为例
+
+{{{
+@表示udp
+@@表示tcp
+
+配置文件路径：
+
+/etc/rsyslog.conf
+/etc/rsyslog.d/50-default.conf
+
+*.*    @xxx.xxx.xxx.xxx:514
+}}}
+
 == 命令 ==
 
 === 清理屏幕 ===

@@ -76,6 +76,20 @@ json_serializer = serializers.get_serializer('json')()
 json_serializer.serialize(all_objects, ensure_ascii=True, stream=open('site.json', 'w'))
 }}}
 
+== 自定义label ==
+
+{{{
+<label class="your-class" for="{{ field.auto_id }}">{{ field.label }}</label>
+}}}
+
+== 批量生成表单 ==
+
+{{{
+{% for field in form %}
+{{ field }}
+{% endfor %}
+}}}
+
 == 乘除法 ==
 
 http://my.oschina.net/renwofei423/blog/12713
@@ -121,6 +135,12 @@ python manage.py test user
 }}}
 
 * django session unittest
+* 模拟request
+{{{
+from django.test.client import RequestFactory
+self.factory = RequestFactory()
+request = self.factory.get('/fake/url/')
+}}}
 
 == Session ==
 
