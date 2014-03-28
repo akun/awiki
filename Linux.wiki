@@ -40,6 +40,28 @@ Ubuntu为例
 
 == 命令 ==
 
+=== 清理命令输入 ==
+
+{{{
+Ctrl - u  # 全部删除
+Ctrl - w  # 按词删除（从后往前）
+}}}
+
+=== 按比例缩放当前目录下的图片 ===
+
+{{{
+sudo apt-get install imagemagick
+for img in `ls`; do convert -resize "50%x50%" "$img" "small-$img"; done
+}}}
+
+=== awk ===
+
+计算以列方式展示的文本中的数字和
+
+{{{
+cat money.txt | awk '{sum += $1};END {print sum}'
+}}}
+
 === 清理屏幕 ===
 
 {{{
@@ -314,6 +336,15 @@ shared-network名称
   * http://forum.linuxfans.org/archiver/?tid-163567.html
 
 == Ubuntu ==
+
+=== 包管理 ===
+
+删除包区别：
+
+{{{
+sudo apt-get remove xxxx  # 删除软件
+sudo apt-get purge xxxx  # 纯净方式删除软件，会删除一些配置
+}}}
 
 === 网卡 ===
 

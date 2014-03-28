@@ -1,0 +1,16 @@
+%toc
+%title akun's Wiki - Make
+
+= Make =
+
+传参数
+
+{{{
+make love PORT=9527
+}}}
+
+Makefile中引用
+
+{{{
+$(PORT)
+}}}

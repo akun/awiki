@@ -50,7 +50,8 @@
 
 == 其它工具 ==
 
-* [[Sphinx]] | reStructuredText | MarkDow | [[VimWiki]]
+* [[Sphinx]] | reStructuredText | MarkDown | [[VimWiki]]
+* [[Make]]
 * [[terminal|终端工具]] | [[tools|杂项工具]]
 * [[MindMap|思维导图]] | [[GTD]]
 

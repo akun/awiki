@@ -3,6 +3,16 @@
 
 = Django =
 
+== JSON response ==
+
+http://stackoverflow.com/questions/2428092/creating-a-json-response-using-django-and-python
+
+{{{
+return HttpResponse(json.dumps(response_data), content_type="application/json")
+}}}
+
+mimetype不推荐使用了，新版Django都用content_type
+
 == 数据库中的zlib ==
 
 http://stackoverflow.com/questions/875122/zlib-in-database-django

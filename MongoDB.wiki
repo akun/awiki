@@ -81,6 +81,10 @@ MongKit关心库的考虑点
 * 连接数
 * 替换的方法可靠性
 
+嵌套数据结构
+
+* 类似这种[{'a': 1}]，不支持点号的语法，即使声明可以用点号，例如：doc.cats[0]['color']。不能这么用，doc.cats[0].color
+
 === 经验 ===
 
 * Bulk and atomic updates，直接用了pymongo，所以没有做校验了
