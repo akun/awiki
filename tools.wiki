@@ -29,6 +29,10 @@ from mongokit.helpers import DotCollapsedDict
 
 * https://pypi.python.org/pypi/coverage
 
+参数：
+
+--cover-package是导入的包名，例如：a.b.c
+
 == requests ==
 
 * https://github.com/kennethreitz/requests/blob/master/requests/models.py#L399
