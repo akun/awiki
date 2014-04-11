@@ -75,6 +75,13 @@ git mergetool
 
 == Git/SVN ==
 
+混合用git svn：
+
+{{{
+git svn init -T trunk -b branches -t tags SVN_PATH
+git svn fetch
+}}}
+
 迁移：
 
 {{{

@@ -3,6 +3,23 @@
 
 = Linux =
 
+== zsh ==
+
+使用安装扩展，并设置为默认Shell
+{{{
+apt-get install zsh
+wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+chsh -s /usr/local/bin/zsh
+}}}
+
+可选主题：https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+== 查看inode占用情况 ==
+
+{{{
+df -i
+}}}
+
 == tree ==
 
 第一层级目录结构展示

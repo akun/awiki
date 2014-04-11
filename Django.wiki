@@ -152,6 +152,8 @@ self.factory = RequestFactory()
 request = self.factory.get('/fake/url/')
 }}}
 
+* 默认运行单元测试，数据库database必须存在，比如：db1，才会默认自动生成test_db1，不然会出错
+
 == Session ==
 
 * http://stackoverflow.com/questions/5542572/django-check-cookies-are-enabled
