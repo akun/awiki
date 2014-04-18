@@ -3,6 +3,12 @@
 
 = Linux =
 
+== 更新bash配置 ==
+
+{{{
+source ~/.bashrc
+}}}
+
 == zsh ==
 
 使用安装扩展，并设置为默认Shell

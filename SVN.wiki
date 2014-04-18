@@ -23,6 +23,12 @@ svn up --ignore-externals
 svn revert -R .
 }}}
 
+color diff
+
+{{{
+svn diff | vim -
+}}}
+
 == merge ==
 
 * svn merge --dry-run -r 6416:HEAD svn_path .

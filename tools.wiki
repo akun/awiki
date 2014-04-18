@@ -126,7 +126,7 @@ sudo apt-get install graphviz
 == FGFW ==
 
 * Chrome插件：SwitchySharp
-* 选择socket
+* 选择socket（选择：socket5，这样就代理上进行解析域名）
 * 借助plink：http://ethertubes.com/dynamic-socks-proxy-with-plink-exe-and-firefox/
 
 {{{

@@ -14,3 +14,9 @@ Makefile中引用
 {{{
 $(PORT)
 }}}
+
+定义为绝对路径
+
+{{{
+WWWDIR = $(abspath www)
+}}}

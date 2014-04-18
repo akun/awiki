@@ -32,6 +32,10 @@
 PyLint：
 * http://bitten.edgewall.org/ticket/233
 
+对nose的支持（有限）
+
+* http://bitten.edgewall.org/ticket/147
+
 == Jenkins ==
 
 * https://wiki.jenkins-ci.org/display/JENKINS/LDAP+Plugin

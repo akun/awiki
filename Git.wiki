@@ -23,7 +23,15 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
 
 == 经验 ==
 
-《Git 少用 Pull 多用 Fetch 和 Merge》：http://www.oschina.net/translate/git-fetch-and-merge
+pull相关：
+
+* 《Git 少用 Pull 多用 Fetch 和 Merge》：http://www.oschina.net/translate/git-fetch-and-merge
+* http://stackoverflow.com/questions/15316601/in-what-cases-could-git-pull-be-harmful
+
+回滚相关：
+
+* http://git-scm.com/book/zh/Git-工具-重写历史
+* http://www.douban.com/note/322784017/
 
 == 技巧 ==
 
