@@ -3,6 +3,19 @@
 
 = Linux =
 
+== 转化网页文件编码 ==
+
+{{{
+curl http://www.example.com/zhongwen.html | iconv -f GBK -t utf-8
+}}}
+
+== 集群运维管理方案 ==
+
+* salt: http://www.oschina.net/translate/getting-started-salt-stack-other-configuration-management-system-built-python
+* pdsh
+* fabric
+* pxssh
+
 == 更新bash配置 ==
 
 {{{
@@ -126,6 +139,14 @@ ip addr add xxx.xxx.xxx.xxx/27 dev eth0
 === ngrep ===
 
 ngrep -d eth1 port 80 -W byline &> /tmp/x.txt
+
+=== xargs ===
+
+不认为空白符结尾，才停止
+
+{{{
+xargs -0
+}}}
 
 === find ===
 

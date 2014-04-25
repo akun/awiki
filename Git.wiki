@@ -23,6 +23,14 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
 
 == 经验 ==
 
+不能fetch处理
+
+error: could not lock config file .git/config: File exists config --unset-all svn-remote.svn.added-placeholder: command returned error: 255
+
+{{{
+rm .git/config.lock
+}}}
+
 pull相关：
 
 * 《Git 少用 Pull 多用 Fetch 和 Merge》：http://www.oschina.net/translate/git-fetch-and-merge
@@ -41,12 +49,25 @@ diff暂存区
 git diff --staged
 }}}
 
+日志中显示变化的文件
+
+{{{
+git log --stat
+}}}
+
 分支风格的log输出
 
 * http://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
 
 {{{
 git log --graph --oneline
+}}}
+
+忘记提交文件处理
+
+{{{
+git add forgotten_file
+git commit --amend
 }}}
 
 重写

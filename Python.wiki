@@ -19,6 +19,20 @@
 stdout, _ = get_tuple()
 }}}
 
+== 读中文文件 ==
+
+{{{
+import codecs
+codecs.open('zhongwen.txt', 'utf-8')
+}}}
+
+== Traceback ==
+
+{{{
+import traceback
+traceback_info = traceback.format_exc()
+}}}
+
 == 等差划分数列 ==
 
 {{{
