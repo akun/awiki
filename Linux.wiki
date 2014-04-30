@@ -9,6 +9,12 @@
 curl http://www.example.com/zhongwen.html | iconv -f GBK -t utf-8
 }}}
 
+== 解压到指定目录 ==
+
+{{{
+tar jxvf file.tar.bz2 -C myfolder
+}}}
+
 == 集群运维管理方案 ==
 
 * salt: http://www.oschina.net/translate/getting-started-salt-stack-other-configuration-management-system-built-python

@@ -7,7 +7,7 @@
 
 == 编程语言 ==
 
-* [[Python]] | [[JavaScript]] | Shell | C | Erlang | Java | [[Ruby]]
+* [[Python]] | [[JavaScript]] | [[Shell]] | C | Erlang | Java | [[Ruby]]
 * [[Regex|正则表达式]]
 
 === 编程框架 ===

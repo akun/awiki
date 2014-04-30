@@ -3,6 +3,19 @@
 
 = JavaScript =
 
+== 严格模式 ==
+
+建议写到里面，只针对内部生效，避免导入后全局影响其它JavaScript（需要确认是否这样）
+
+{{{
+$(document).ready(function(){
+  'use strict';
+
+  ...
+
+});
+}}}
+
 == 逗号 ==
 
 IE下最后结尾不能有逗号，虽然别的浏览器有兼容，但还是不要这么做
@@ -62,6 +75,20 @@ sudo npm install jshint -g
 vim ~/.jshintrc
 vim ~/.jshintignore
 jshint xxxx.js --verbose --show-non-errors
+}}}
+
+=== 常见场景 ===
+
+忽略jQuery的$报错
+
+修改配置
+
+{{{
+...
+
+jquery: true
+
+...
 }}}
 
 示例：https://github.com/jquery/qunit/blob/master/.jshintrc

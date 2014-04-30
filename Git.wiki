@@ -35,6 +35,12 @@ pull相关：
 
 * 《Git 少用 Pull 多用 Fetch 和 Merge》：http://www.oschina.net/translate/git-fetch-and-merge
 * http://stackoverflow.com/questions/15316601/in-what-cases-could-git-pull-be-harmful
+* 习惯
+
+{{{
+git fetch --all
+git merge origin/develop
+}}}
 
 回滚相关：
 

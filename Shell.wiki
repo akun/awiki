@@ -1,0 +1,19 @@
+%toc
+%title akun's Wiki - Shell
+
+
+== 常用写法 ==
+
+去除文件后缀
+
+{{{
+basename main.py .py
+}}}
+
+获取上级目录绝对路径
+
+{{{
+dirname `pwd`
+readlink -f ..
+busybox realpath ..
+}}}

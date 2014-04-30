@@ -3,6 +3,13 @@
 
 = Python =
 
+== urllib2 ==
+
+* urllib2.install_opener慎用，会覆盖全局
+* handers有handler_order，会有运行顺序印象
+* http/https proxy
+* socket4/5没有特定handler，需要自己实现
+
 == 编程规范 ==
 
 文件头
