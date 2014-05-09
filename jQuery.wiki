@@ -11,3 +11,9 @@ select的option选中
 {{{
 $('option:selected')
 }}}
+
+== prop和attr ==
+
+checked、selected等建议用prop，参考：
+
+* http://api.jquery.com/prop/

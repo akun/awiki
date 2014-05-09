@@ -3,6 +3,10 @@
 
 = Linux =
 
+== 换行 ==
+
+* http://zh.wikipedia.org/wiki/換行
+
 == 转化网页文件编码 ==
 
 {{{
@@ -38,6 +42,10 @@ chsh -s /usr/local/bin/zsh
 }}}
 
 可选主题：https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+注意：
+
+* scp时候需要星号转义：scp user@host:/tmp/\* /tmp/target
 
 == 查看inode占用情况 ==
 
