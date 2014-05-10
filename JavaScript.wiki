@@ -86,7 +86,7 @@ jshint xxxx.js --verbose --show-non-errors
 {{{
 ...
 
-jquery: true
+"jquery": true
 
 ...
 }}}
