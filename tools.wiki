@@ -162,3 +162,5 @@ C:\Windows\System32\drivers\etc\hosts
 * 性能分析：https://launchpad.net/meliae
 * http://linuxtoy.org/archives/autojump.html
 * http://docs.fabfile.org/
+* 编码：http://zh.wikipedia.org/wiki/DEFLATE
+* 静态站点生成工具：http://staticsitegenerators.net/
