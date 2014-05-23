@@ -18,3 +18,9 @@
 == RFC ==
 
 * http://www.ietf.org/rfc/rfc2109.txt
+
+== 编码压缩 ==
+
+* gzip
+* deflate: http://zh.wikipedia.org/wiki/DEFLATE
+* sdch: 新版Chrome支持

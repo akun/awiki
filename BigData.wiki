@@ -6,3 +6,7 @@
 == 全文索引 ==
 
 * elasticsearch
+
+== 资源 ==
+
+* mahout: http://weikey.me/page/2

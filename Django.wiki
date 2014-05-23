@@ -350,3 +350,4 @@ python manger.py cleanup 数据过多时候，可能导致数据库崩溃？
 == 资源 ==
 
 * http://haoluobo.com/trac/wiki/Django
+* https://www.djangoproject.com/community/blogs/

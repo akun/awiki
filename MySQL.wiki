@@ -44,3 +44,7 @@ UPDATE table_name SET a=b, b=a;
 == 慢日志 ==
 
 == 增加用户 ==
+
+== 插入数据细节 ==
+
+* http://blog.csdn.net/dukope/article/details/9013695

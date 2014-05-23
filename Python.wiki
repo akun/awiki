@@ -3,6 +3,12 @@
 
 = Python =
 
+== StingIO ==
+
+可以用来模拟文件的操作
+
+* https://docs.python.org/2/library/stringio.html#module-StringIO
+
 == urllib2 ==
 
 * urllib2.install_opener慎用，会覆盖全局
@@ -223,6 +229,7 @@ if __name__ == '__main__':
 * Popen(['grep', grep_pattern], stdin=process_ps.stdout, stdout=PIPE, universal_newlines=True)
 * os.path.join(os.path.abspath(os.path.dirname(__file__)), 'YOUR_FILE_PATH')
 * 慎用os.chdir()或者得配合好os.getcwd()
+* 获得当前用户目录：os.path.expanduser('~')
 
 == 发布工具 ==
 
