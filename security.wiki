@@ -8,6 +8,11 @@
 * 风险是威胁利用弱点的可能性
 * 事件是记录
 
+== DNS劫持 ==
+
+* http://thevpn.guru/dns-hijacking-exposed-explained/
+* http://hackercodex.com/guide/how-to-stop-isp-dns-server-hijacking/
+
 == 资源 ==
 
 * https://developers.shodan.io/

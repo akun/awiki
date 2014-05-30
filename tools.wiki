@@ -23,6 +23,7 @@ cat a.json | python -mjson.tool
 
 * nose的Django插件写法：http://pydoc.net/Python/NoseDjango/0.8.1/nosedjango.nosedjango/
 * 输出测试时候的print：--nocapture
+* doctest：--with-doctest
 
 == 处理CSV的unicode ==
 
