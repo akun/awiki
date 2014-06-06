@@ -3,6 +3,16 @@
 
 = Python =
 
+== 修改文件修改时间 ==
+
+{{{
+import time
+import os
+
+touch_time = time.mktime(time.strptime('1990-01-01 00:00:00', '%Y-%m-%d %H:%M:%S'))
+os.utime(file_path, (touch_time, touch_time))
+}}}
+
 == StingIO ==
 
 可以用来模拟文件的操作

@@ -68,6 +68,18 @@ ObjectId()
 ObjectId(None)
 }}}
 
+== distinct ==
+
+Shell和pymongo操作不同
+
+{{{
+# shell
+db.col.distinct(key, query)
+
+# pymongo
+db.col.find(query).distinct(key)
+}}}
+
 === sort ===
 
 {{{
