@@ -7,10 +7,27 @@
 
 * http://zh.wikipedia.org/wiki/換行
 
-== 转化网页文件编码 ==
+
+== curl ==
+
+=== 转化网页文件编码 ===
 
 {{{
 curl http://www.example.com/zhongwen.html | iconv -f GBK -t utf-8
+}}}
+
+=== HTTP Auth ===
+
+默认Basic认证
+
+{{{
+curl -u "username:password" http://www.example.com/login
+}}}
+
+Digest有bug，不带认证信息
+
+{{{
+curl -u "username:password" http://www.example.com/login --digest
 }}}
 
 == 解压到指定目录 ==
