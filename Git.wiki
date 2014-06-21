@@ -49,6 +49,12 @@ git merge origin/develop
 
 == 技巧 ==
 
+reset保留文件
+
+{{{
+git reset --hard --keep
+}}}
+
 diff暂存区
 
 {{{
