@@ -23,6 +23,12 @@ git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
 
 == 经验 ==
 
+清理本地冗余分支
+
+{{{
+git fetch -p
+}}}
+
 不能fetch处理
 
 error: could not lock config file .git/config: File exists config --unset-all svn-remote.svn.added-placeholder: command returned error: 255

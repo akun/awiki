@@ -3,6 +3,16 @@
 
 = Python =
 
+== str的format ==
+
+* Python2.6和Python2.7有兼容问题需要注意
+
+== 命令行兼容处理 ==
+
+{{{
+/usr/bin/env python
+}}}
+
 == 修改文件修改时间 ==
 
 {{{
