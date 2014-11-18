@@ -15,10 +15,16 @@ svn checkout - git clone
 
 {{{
 git remote add remotename git@xxx.xxx.xxx.xxx:usernmae/project.git
+git remote add remotename file://x/y/z
 git remote rm remotename
 git fetch remotename
 git show-ref
-git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
+git push <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>
+git push origin [tagname]
+git rebase upstream/develop
+git checkout -b features/add_xxx upstream/features/add_xxx
+git subtree split --prefix=bigproject/submodule -b submodule --squash
+git cherry-pick <commit id>
 }}}
 
 == 经验 ==

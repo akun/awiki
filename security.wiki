@@ -13,6 +13,8 @@
 * http://thevpn.guru/dns-hijacking-exposed-explained/
 * http://hackercodex.com/guide/how-to-stop-isp-dns-server-hijacking/
 
+== fuzzy ==
+
 == 资源 ==
 
 * https://developers.shodan.io/

@@ -3,8 +3,16 @@
 
 = Redis =
 
-查看配置
+== 查看配置 ==
 
 {{{
 redis-cli CONFIG GET \*
+}}}
+
+== 清空 ==
+
+慎用！
+
+{{{
+flushall
 }}}

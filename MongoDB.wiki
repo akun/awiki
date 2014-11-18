@@ -105,6 +105,10 @@ class A(Docuement):
     indexes = [{'fields': 'field_a', 'unique': True, 'drop_dups': True}]
 }}}
 
+=== 坑 ===
+
+* save=True，而不是 pymongo 的默认行为
+
 === 经验 ===
 
 * Bulk and atomic updates，直接用了pymongo，所以没有做校验了

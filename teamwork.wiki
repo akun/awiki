@@ -1,0 +1,22 @@
+%toc
+%title akun's Wiki - 协作工具
+
+= 协作工具 =
+
+== GitLab ==
+
+=== 坑 ===
+
+accept merge request 时有时候会出问题，可以得话直接采用命令行方式合并，正好测试验证代码是否通过
+
+=== 手工触发 CI ===
+
+未知 bug 导致新增加的 CI 项目一直处于 pending 状态
+
+{{{
+curl -X POST 'http://gitlab-ci.example.com/api/v1/projects/9527/runners/1234?private_token=mytoken&url=http://gitlab.example.com/'
+}}}
+
+== Trello ==
+
+筛选快捷键：q

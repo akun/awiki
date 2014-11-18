@@ -3,6 +3,23 @@
 
 = 杂项工具 =
 
+== 自己搭建 PYPI ==
+
+* http://doc.devpi.net/latest/quickstart-pypimirror.html
+
+{{{
+devpi quickstart
+devpi-server --host=0.0.0.0 --start
+}}}
+
+== 借助 Vim Tab 转化 4 空格 ==
+
+Vim 配置不同，转化有风险！必须是 Tab 缩进为 4 空格
+
+{{{
+for i in `find . -name '*.py'`; do vim $i +retab +wq; done;
+}}}
+
 == 命令行下格式化JSON ==
 
 {{{

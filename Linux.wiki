@@ -3,6 +3,12 @@
 
 = Linux =
 
+== date ==
+
+{{{
+LOGFILE=$(LOGPATH) `date +'%y.%m.%d %H:%M:%S'`
+}}}
+
 == 换行 ==
 
 * http://zh.wikipedia.org/wiki/換行
@@ -165,7 +171,17 @@ cp test.py{,.bk}
 
 === sudo ===
 
-sudo重定向：sudo sh -c "route -n > /tmp/haha"
+==== sudo 重定向 ====
+
+{{{
+sudo sh -c "route -n > /tmp/haha"
+}}}
+
+==== 用管道传递密码直接执行 sudo ====
+
+{{{
+echo mypassword | sudo -S ls
+}}}
 
 === ip ===
 

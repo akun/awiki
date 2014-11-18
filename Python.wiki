@@ -3,6 +3,31 @@
 
 = Python =
 
+== 动态导入 ==
+
+{{{
+__import__('string', globals(), locals(), ['join', 'split'])
+}}}
+
+== 编译成 pyc ==
+
+{{{
+python -m compileall myproject/src
+}}}
+
+== 编码问题 ==
+
+{{{
+>>> unicode(u'中文', encoding='utf-8')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: decoding Unicode is not supported
+>>> unicode('中文', encoding='utf-8')
+u'\u4e2d\u6587'
+>>> import sys; sys.getdefaultencoding()
+'ascii'
+}}}
+
 == str的format ==
 
 * Python2.6和Python2.7有兼容问题需要注意

@@ -52,7 +52,7 @@
 
 * [[Sphinx]] | reStructuredText | MarkDown | [[VimWiki]]
 * [[Make]]
-* [[terminal|终端工具]] | [[tools|杂项工具]]
+* [[terminal|终端工具]] | [[tools|杂项工具]] | [[teamwork|协作工具]]
 * [[MindMap|思维导图]] | [[GTD]]
 
 == Web开发 ==
